@@ -1,0 +1,2635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "7roo5spz5u");
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script
+        type="text/javascript">(window.NREUM || (NREUM = {})).init = { ajax: { deny_list: ["bam.nr-data.net"] } }; (window.NREUM || (NREUM = {})).loader_config = { licenseKey: "ca07248735", applicationID: "797055187" }; window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var i = e[n] = { exports: {} }; t[n][0].call(i.exports, function (e) { var i = t[n][1][e]; return r(i || e) }, i, i.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < n.length; i++)r(n[i]); return r }({ 1: [function (t, e, n) { function r() { } function i(t, e, n, r) { return function () { return s.recordSupportability("API/" + e + "/called"), o(t + e, [u.now()].concat(c(arguments)), n ? null : this, r), n ? void 0 : this } } var o = t("handle"), a = t(9), c = t(10), f = t("ee").get("tracer"), u = t("loader"), s = t(4), d = NREUM; "undefined" == typeof window.newrelic && (newrelic = d); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", v = l + "ixn-"; a(p, function (t, e) { d[e] = i(l, e, !0, "api") }), d.addPageAction = i(l, "addPageAction", !0), d.setCurrentRouteName = i(l, "routeName", !0), e.exports = newrelic, d.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (t, e) { var n = {}, r = this, i = "function" == typeof e; return o(v + "tracer", [u.now(), t, n], r), function () { if (f.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], n), i) try { return e.apply(this, arguments) } catch (t) { throw f.emit("fn-err", [arguments, this, t], n), t } finally { f.emit("fn-end", [u.now()], n) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) { m[e] = i(v, e) }), newrelic.noticeError = function (t, e) { "string" == typeof t && (t = new Error(t)), s.recordSupportability("API/noticeError/called"), o("err", [t, u.now(), !1, e]) } }, {}], 2: [function (t, e, n) { function r(t) { if (NREUM.init) { for (var e = NREUM.init, n = t.split("."), r = 0; r < n.length - 1; r++)if (e = e[n[r]], "object" != typeof e) return; return e = e[n[n.length - 1]] } } e.exports = { getConfiguration: r } }, {}], 3: [function (t, e, n) { var r = !1; try { var i = Object.defineProperty({}, "passive", { get: function () { r = !0 } }); window.addEventListener("testPassive", null, i), window.removeEventListener("testPassive", null, i) } catch (o) { } e.exports = function (t) { return r ? { passive: !0, capture: !!t } : !!t } }, {}], 4: [function (t, e, n) { function r(t, e) { var n = [a, t, { name: t }, e]; return o("storeMetric", n, null, "api"), n } function i(t, e) { var n = [c, t, { name: t }, e]; return o("storeEventMetrics", n, null, "api"), n } var o = t("handle"), a = "sm", c = "cm"; e.exports = { constants: { SUPPORTABILITY_METRIC: a, CUSTOM_METRIC: c }, recordSupportability: r, recordCustom: i } }, {}], 5: [function (t, e, n) { function r() { return c.exists && performance.now ? Math.round(performance.now()) : (o = Math.max((new Date).getTime(), o)) - a } function i() { return o } var o = (new Date).getTime(), a = o, c = t(11); e.exports = r, e.exports.offset = a, e.exports.getLastTimestamp = i }, {}], 6: [function (t, e, n) { function r(t, e) { var n = t.getEntries(); n.forEach(function (t) { "first-paint" === t.name ? l("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && l("timing", ["fcp", Math.floor(t.startTime)]) }) } function i(t, e) { var n = t.getEntries(); if (n.length > 0) { var r = n[n.length - 1]; if (u && u < r.startTime) return; var i = [r], o = a({}); o && i.push(o), l("lcp", i) } } function o(t) { t.getEntries().forEach(function (t) { t.hadRecentInput || l("cls", [t]) }) } function a(t) { var e = navigator.connection || navigator.mozConnection || navigator.webkitConnection; if (e) return e.type && (t["net-type"] = e.type), e.effectiveType && (t["net-etype"] = e.effectiveType), e.rtt && (t["net-rtt"] = e.rtt), e.downlink && (t["net-dlink"] = e.downlink), t } function c(t) { if (t instanceof y && !w) { var e = Math.round(t.timeStamp), n = { type: t.type }; a(n), e <= v.now() ? n.fid = v.now() - e : e > v.offset && e <= Date.now() ? (e -= v.offset, n.fid = v.now() - e) : e = v.now(), w = !0, l("timing", ["fi", e, n]) } } function f(t) { "hidden" === t && (u = v.now(), l("pageHide", [u])) } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var u, s, d, p, l = t("handle"), v = t("loader"), m = t(8), g = t(3), y = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { s = new PerformanceObserver(r); try { s.observe({ entryTypes: ["paint"] }) } catch (h) { } d = new PerformanceObserver(i); try { d.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (h) { } p = new PerformanceObserver(o); try { p.observe({ type: "layout-shift", buffered: !0 }) } catch (h) { } } if ("addEventListener" in document) { var w = !1, b = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; b.forEach(function (t) { document.addEventListener(t, c, g(!1)) }) } m(f) } }, {}], 7: [function (t, e, n) { function r(t, e) { if (!i) return !1; if (t !== i) return !1; if (!e) return !0; if (!o) return !1; for (var n = o.split("."), r = e.split("."), a = 0; a < r.length; a++)if (r[a] !== n[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var c = navigator.userAgent, f = c.match(a); f && c.indexOf("Chrome") === -1 && c.indexOf("Chromium") === -1 && (i = "Safari", o = f[1]) } e.exports = { agent: i, version: o, match: r } }, {}], 8: [function (t, e, n) { function r(t) { function e() { t(c && document[c] ? document[c] : document[o] ? "hidden" : "visible") } "addEventListener" in document && a && document.addEventListener(a, e, i(!1)) } var i = t(3); e.exports = r; var o, a, c; "undefined" != typeof document.hidden ? (o = "hidden", a = "visibilitychange", c = "visibilityState") : "undefined" != typeof document.msHidden ? (o = "msHidden", a = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (o = "webkitHidden", a = "webkitvisibilitychange", c = "webkitVisibilityState") }, {}], 9: [function (t, e, n) { function r(t, e) { var n = [], r = "", o = 0; for (r in t) i.call(t, r) && (n[o] = e(r, t[r]), o += 1); return n } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], 10: [function (t, e, n) { function r(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, i = n - e || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = t[e + r]; return o } e.exports = r }, {}], 11: [function (t, e, n) { e.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (t, e, n) { function r() { } function i(t) { function e(t) { return t && t instanceof r ? t : t ? u(t, f, a) : a() } function n(n, r, i, o, a) { if (a !== !1 && (a = !0), !l.aborted || o) { t && a && t(n, r, i); for (var c = e(i), f = m(n), u = f.length, s = 0; s < u; s++)f[s].apply(c, r); var p = d[w[n]]; return p && p.push([b, n, r, c]), c } } function o(t, e) { h[t] = m(t).concat(e) } function v(t, e) { var n = h[t]; if (n) for (var r = 0; r < n.length; r++)n[r] === e && n.splice(r, 1) } function m(t) { return h[t] || [] } function g(t) { return p[t] = p[t] || i(n) } function y(t, e) { l.aborted || s(t, function (t, n) { e = e || "feature", w[n] = e, e in d || (d[e] = []) }) } var h = {}, w = {}, b = { on: o, addEventListener: o, removeEventListener: v, emit: n, get: g, listeners: m, context: e, buffer: y, abort: c, aborted: !1 }; return b } function o(t) { return u(t, f, a) } function a() { return new r } function c() { (d.api || d.feature) && (l.aborted = !0, d = l.backlog = {}) } var f = "nr@context", u = t("gos"), s = t(9), d = {}, p = {}, l = e.exports = i(); e.exports.getOrSetContext = o, l.backlog = d }, {}], gos: [function (t, e, n) { function r(t, e, n) { if (i.call(t, e)) return t[e]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return t[e] = r, r } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], handle: [function (t, e, n) { function r(t, e, n, r) { i.buffer([t], r), i.emit(t, e, n) } var i = t("ee").get("handle"); e.exports = r, r.ee = i }, {}], id: [function (t, e, n) { function r(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, o, function () { return i++ }) } var i = 1, o = "nr@id", a = t("gos"); e.exports = r }, {}], loader: [function (t, e, n) { function r() { if (!M++) { var t = T.info = NREUM.info, e = m.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort(); f(x, function (e, n) { t[e] || (t[e] = n) }); var n = a(); c("mark", ["onload", n + T.offset], null, "api"), c("timing", ["load", n]); var r = m.createElement("script"); 0 === t.agent.indexOf("http://") || 0 === t.agent.indexOf("https://") ? r.src = t.agent : r.src = l + "://" + t.agent, e.parentNode.insertBefore(r, e) } } function i() { "complete" === m.readyState && o() } function o() { c("mark", ["domContent", a() + T.offset], null, "api") } var a = t(5), c = t("handle"), f = t(9), u = t("ee"), s = t(7), d = t(2), p = t(3), l = d.getConfiguration("ssl") === !1 ? "http" : "https", v = window, m = v.document, g = "addEventListener", y = "attachEvent", h = v.XMLHttpRequest, w = h && h.prototype, b = !1; NREUM.o = { ST: setTimeout, SI: v.setImmediate, CT: clearTimeout, XHR: h, REQ: v.Request, EV: v.Event, PR: v.Promise, MO: v.MutationObserver }; var E = "" + location, x = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1216.min.js" }, O = h && w && w[g] && !/CriOS/.test(navigator.userAgent), T = e.exports = { offset: a.getLastTimestamp(), now: a, origin: E, features: {}, xhrWrappable: O, userAgent: s, disabled: b }; if (!b) { t(1), t(6), m[g] ? (m[g]("DOMContentLoaded", o, p(!1)), v[g]("load", r, p(!1))) : (m[y]("onreadystatechange", i), v[y]("onload", r)), c("mark", ["firstbyte", a.getLastTimestamp()], null, "api"); var M = 0 } }, {}], "wrap-function": [function (t, e, n) { function r(t, e) { function n(e, n, r, f, u) { function nrWrapper() { var o, a, s, p; try { a = this, o = d(arguments), s = "function" == typeof r ? r(o, a) : r || {} } catch (l) { i([l, "", [o, a, f], s], t) } c(n + "start", [o, a, f], s, u); try { return p = e.apply(a, o) } catch (v) { throw c(n + "err", [o, a, v], s, u), v } finally { c(n + "end", [o, a, p], s, u) } } return a(e) ? e : (n || (n = ""), nrWrapper[p] = e, o(e, nrWrapper, t), nrWrapper) } function r(t, e, r, i, o) { r || (r = ""); var c, f, u, s = "-" === r.charAt(0); for (u = 0; u < e.length; u++)f = e[u], c = t[f], a(c) || (t[f] = n(c, s ? f + r : r, i, f, o)) } function c(n, r, o, a) { if (!v || e) { var c = v; v = !0; try { t.emit(n, r, o, e, a) } catch (f) { i([f, n, r, o], t) } v = c } } return t || (t = s), n.inPlace = r, n.flag = p, n } function i(t, e) { e || (e = s); try { e.emit("internal-error", t) } catch (n) { } } function o(t, e, n) { if (Object.defineProperty && Object.keys) try { var r = Object.keys(t); return r.forEach(function (n) { Object.defineProperty(e, n, { get: function () { return t[n] }, set: function (e) { return t[n] = e, e } }) }), e } catch (o) { i([o], n) } for (var a in t) l.call(t, a) && (e[a] = t[a]); return e } function a(t) { return !(t && t instanceof Function && t.apply && !t[p]) } function c(t, e) { var n = e(t); return n[p] = t, o(t, n, s), n } function f(t, e, n) { var r = t[e]; t[e] = c(r, n) } function u() { for (var t = arguments.length, e = new Array(t), n = 0; n < t; ++n)e[n] = arguments[n]; return e } var s = t("ee"), d = t(10), p = "nr@original", l = Object.prototype.hasOwnProperty, v = !1; e.exports = r, e.exports.wrapFunction = c, e.exports.wrapInPlace = f, e.exports.argsToArray = u }, {}] }, {}, ["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <style>
+        * {
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        #edpd_global_copy_alert {
+            position: fixed;
+            right: 0px;
+            top: 50px;
+            z-index: 9999;
+            background: #60cc79;
+            color: white;
+            padding: 10px;
+            box-shadow: 2px 2px 10px -2px #aaa;
+            border: 1px solid #5aca75;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: opacity 0.5s;
+        }
+
+        #edpd_global_copy_alert.edpd-deactive-alert {
+            transform: translate(210px);
+            transition: transform 1s ease;
+        }
+
+        #edpd_global_copy_alert.edpd-active-alert {
+            transition: transform 1s ease;
+            transform: translate(-20px);
+        }
+    </style>
+    <script async src="https://cdn.snigelweb.com/adengine/editpad.org/loader.js" type="text/javascript"></script>
+    <title>Diff Checker - Check Difference between two files (Text)</title>
+    <meta name="description"
+        content="Online Diff Checker finds the difference between two files/documents. This difference checker accurately compares sentences and finds the dissimilarity.">
+    <meta property="og:image" content="https://www.editpad.org/tool/imgs/social-imgs/diff-checker.png" />
+    <link href="https://www.editpad.org/editpad.png" rel="icon" type="image/x-icon" />
+    <meta name="Robots" content="INDEX, FOLLOW">
+
+    <link rel="canonical" href="https://www.editpad.org/tool/diff-checker" />
+    <link rel="alternate" hreflang="x-default" href="https://www.editpad.org/tool/diff-checker" />
+    <link rel="alternate" hreflang="en" href="https://www.editpad.org/tool/diff-checker" />
+    <link rel="alternate" hreflang="es" href="https://www.editpad.org/tool/es/comprobador-de-diferencias" />
+    <link rel="alternate" hreflang="fr" href="https://www.editpad.org/tool/fr/verificateur-de-differentiel" />
+    <link rel="alternate" hreflang="de" href="https://www.editpad.org/tool/de/diff-prufer" />
+    <link rel="alternate" hreflang="id" href="https://www.editpad.org/tool/id/pemeriksa-perbedaan" />
+    <script type="text/javascript">
+        var base_url = "https://www.editpad.org/tool/";
+        var tool_name = "Diff Checker";
+        var tool_title = "Diff Checker";
+        var default_text = "Welcome to EditPad.org - your online plain text editor. Enter or paste your text here. To download and save it, click on the button below.";
+        var doWarn = 1;
+
+        // -- search Seed Array
+        var allToolsSearchSeeds = [["plagiarism-checker", "Plagiarism Checker"], ["paraphrasing-tool", "Paraphrasing Tool"], ["reverse-text-generator", "Reverse Text - Backwards Text Generator"], ["small-text-generator", "Small Text Generator - Small Caps / Tiny Text"], ["upside-down-text-converter", "Upside Down Text Generator"], ["words-to-pages", "Words to Pages"], ["case-converter", "Case Converter"], ["online-rich-text-editor", "Online rich-text editor"], ["grammar-checker", "Grammar Checker"], ["article-rewriter", "Article Rewriter"], ["invisible-character", "Invisible Character"], ["readability-checker", "Readability Checker"], ["diff-checker", "Diff Checker"], ["text-similarity-checker", "Text Similarity Checker"], ["extract-text-from-image", "Extract Text From Image"], ["text-summarizer", "Text Summarizer"], ["emoji-translator", "Emoji Translator"], ["weird-text-generator", "Weird Text Generator"], ["stylish-text-generator", "Stylish Text Generator"], ["glitchy-text-generator", "Glitch Text Generator"], ["cursive-font-generator", "Cursive Font Generator"], ["gothic-text-generator", "Gothic Text Generator"], ["discord-font-generator", "Discord Font Generator"], ["aesthetic-text-generator", "Aesthetic Text Generator"], ["cool-text", "Cool Text Generator"], ["wingdings-translator", "Wingdings Translator"], ["old-english-translator", "Old English Translator"], ["online-html-editor", "Online HTML Editor"], ["cursed-font", "Cursed Text Generator"], ["bubble-text", "Bubble Text Generator"], ["strikethrough-text", "Strikethrough Text Generator"], ["zalgo-text", "Zalgo Text Generator"], ["big-text", "Big Text Generator - Generate Large Text "], ["old-norse-translator", "Old Norse Translator"], ["fancy-font", "Fancy Font Generator"], ["cool-font", "Cool Font Generator"], ["fortnite-font", "Fortnite Font Generator"], ["fancy-text-generator", "Fancy Text Generator"], ["word-counter", "Word Counter"], ["character-counter", "Character Counter"], ["punctuation-checker", "Punctuation checker"], ["text-repeater", "Text Repeater"], ["vaporwave-text-generator", "Vaporwave Text Generator"], ["citation-generator", "Citation Generator"], ["title-generator", "Title Generator"], ["text-to-handwriting", "Text To Handwriting"], ["alphabetizer", "Alphabetizer"], ["conclusion-generator", "Conclusion Generator"], ["abstract-generator", "Abstract Generator"], ["list-randomizer", "List Randomizer"], ["sentence-counter", "Sentence Counter"], ["speech-to-text", "Speech to text"], ["check-mark-symbol", "Check Mark Symbol"], ["plagiarism-checker", "Plagiarism Checker"], ["paraphrasing-tool", "Paraphrasing Tool"], ["reverse-text-generator", "Reverse Text - Backwards Text Generator"], ["small-text-generator", "Small Text Generator - Small Caps / Tiny Text"], ["upside-down-text-converter", "Upside Down Text Generator"], ["words-to-pages", "Words to Pages"], ["case-converter", "Case Converter"], ["online-rich-text-editor", "Online rich-text editor"], ["grammar-checker", "Grammar Checker"], ["article-rewriter", "Article Rewriter"], ["invisible-character", "Invisible Character"], ["readability-checker", "Readability Checker"], ["diff-checker", "Diff Checker"], ["text-similarity-checker", "Text Similarity Checker"], ["extract-text-from-image", "Extract Text From Image"], ["text-summarizer", "Text Summarizer"], ["emoji-translator", "Emoji Translator"], ["weird-text-generator", "Weird Text Generator"], ["stylish-text-generator", "Stylish Text Generator"], ["glitchy-text-generator", "Glitch Text Generator"], ["cursive-font-generator", "Cursive Font Generator"], ["gothic-text-generator", "Gothic Text Generator"], ["discord-font-generator", "Discord Font Generator"], ["aesthetic-text-generator", "Aesthetic Text Generator"], ["cool-text", "Cool Text Generator"], ["wingdings-translator", "Wingdings Translator"], ["old-english-translator", "Old English Translator"], ["online-html-editor", "Online HTML Editor"], ["cursed-font", "Cursed Text Generator"], ["bubble-text", "Bubble Text Generator"], ["strikethrough-text", "Strikethrough Text Generator"], ["zalgo-text", "Zalgo Text Generator"], ["big-text", "Big Text Generator - Generate Large Text "], ["old-norse-translator", "Old Norse Translator"], ["fancy-font", "Fancy Font Generator"], ["cool-font", "Cool Font Generator"], ["fortnite-font", "Fortnite Font Generator"], ["fancy-text-generator", "Fancy Text Generator"], ["word-counter", "Word Counter"], ["character-counter", "Character Counter"], ["punctuation-checker", "Punctuation checker"], ["text-repeater", "Text Repeater"], ["vaporwave-text-generator", "Vaporwave Text Generator"], ["citation-generator", "Citation Generator"], ["title-generator", "Title Generator"], ["text-to-handwriting", "Text To Handwriting"], ["alphabetizer", "Alphabetizer"], ["conclusion-generator", "Conclusion Generator"], ["abstract-generator", "Abstract Generator"], ["list-randomizer", "List Randomizer"], ["sentence-counter", "Sentence Counter"], ["speech-to-text", "Speech to text"], ["check-mark-symbol", "Check Mark Symbol"],];
+
+    </script>
+
+    <script src="https://www.editpad.org/search-autocomplete-min.js?ver=5.6"></script>
+    <div id="search-bar-global">
+        <div class="autocomplete">
+            <input type="search" placeholder="Enter Search Term To Find Tool" id="search_query">
+        </div>
+        <span class="close-search" onclick="closeSearchBar()">&times;</span>
+    </div>
+    <script>
+
+        autocomplete(document.getElementById("search_query"), allToolsSearchSeeds);
+    </script>
+    <style>
+        .darkmode #search-bar-global .autocomplete-items a {
+            background: #565656 !important;
+            color: white !important;
+        }
+
+        .darkmode .search-icon-image {
+            filter: invert(1);
+        }
+
+        .search-top {
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .darkmode #search-bar-global,
+        #search-bar-global {
+            display: none;
+            height: 100%;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 88888888;
+            padding: 10px;
+            background: #000a !important;
+        }
+
+        .search-icon-image {
+            height: 24px;
+            width: 24px;
+        }
+
+        #search-bar-global input[type="search"] {
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            font-size: 18px;
+            outline: 0;
+            border-radius: 5px;
+        }
+
+        #search-bar-global .close-search {
+            position: absolute;
+            top: 70px !important;
+            right: 60px !important;
+            cursor: pointer;
+            font-size: 3em !important;
+            line-height: 0px;
+            color: white !important;
+        }
+
+        #search-bar-global .autocomplete {
+            position: relative;
+            background: none !important;
+            display: inline-block;
+            width: 100%;
+            padding: 35px 80px 0 80px !important;
+        }
+
+        #search-bar-global .autocomplete-items {
+            padding: 10px;
+            position: absolute;
+            z-index: 99;
+            background: white;
+            top: 100%;
+            margin: 0 80px;
+            display: flex;
+            flex-wrap: wrap;
+            left: 0;
+            right: 0;
+            align-content: flex-start;
+        }
+
+        #search-bar-global .autocomplete-items a {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            margin: 5px;
+            cursor: pointer;
+            width: 24%;
+            font-size: 14px;
+            background: #e9e9e9;
+        }
+
+        #search-bar-global .autocomplete-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+
+        @media (max-width: 767px) {
+            #search-bar-global .autocomplete-items {
+                overflow-y: scroll;
+                height: 400px;
+            }
+
+            #search-bar-global .autocomplete {
+                padding: 50px 30px 0 30px !important;
+            }
+
+            #search-bar-global .autocomplete-items {
+                margin: 0 30px;
+            }
+
+            #search-bar-global .autocomplete-items a {
+                width: 100%;
+            }
+
+            #search-bar-global .close-search {
+                top: 85px !important;
+                right: 10px !important;
+                font-size: 4em;
+            }
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        var recaptchaFeedback;
+        var reCaptcha;
+        var onloadCallback = function () {
+            recaptchaFeedback = grecaptcha.render(document.getElementById('recaptchaFeedback'), {
+                'sitekey': '6LfVqYwdAAAAAGv8GKaCmOVKpkLKa5HzDWG1GfKi',
+                'theme': 'light'
+            });
+            reCaptcha = grecaptcha.render(document.getElementById('recaptchaBeforeBtn'), {
+                'sitekey': '6LfVqYwdAAAAAGv8GKaCmOVKpkLKa5HzDWG1GfKi',
+                'theme': 'light'
+            });
+        };
+    </script>
+    <style type="text/css">
+        textarea {
+            resize: none;
+        }
+
+        .labels__ads {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .labels,
+        .top_ad_box {
+            display: block
+        }
+    </style>
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginheight="0"
+    marginwidth="0" class="">
+    <div id="edpd_global_copy_alert" class="edpd-deactive-alert"><b>Success:</b> Text Copied</div>
+    <div class="main____div">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                margin: 0px;
+            }
+
+            .header {
+                box-shadow: 0px 0px 2px #ccc;
+                overflow: hidden;
+                margin-bottom: 1px;
+                padding: 10px;
+                font-size: 15px;
+            }
+
+            .header a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            .header .logo {
+                float: left;
+            }
+
+            .header .navbar {
+                float: right;
+            }
+
+            .header .navbar li {
+                list-style: none;
+                margin-left: 15px;
+                display: inline-block;
+            }
+
+            .header {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .footer {
+                width: 100%;
+                display: block;
+                text-align: center;
+                font-family: arial;
+                font-size: 14px;
+                margin-top: 50px
+            }
+
+            .footer li {
+                list-style: none;
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+
+            .langanmes {
+                font-size: 12px;
+            }
+
+            .content {
+                width: 1100px;
+                max-width: 100%;
+                margin: 0 auto;
+                background: #fff;
+                padding: 5px;
+                border: 0;
+                box-sizing: border-box;
+            }
+
+            .content p,
+            .content li {
+                line-height: 2;
+            }
+
+            .content img {
+                max-width: 100%;
+            }
+
+            .text-center {
+                text-align: center;
+            }
+
+            .donate {
+                margin: 0px auto;
+                text-align: center;
+            }
+
+            .donate a {
+                color: #000;
+                font-weight: 700;
+                text-decoration: underline;
+            }
+
+            @media(max-width:600px) {
+                .header .logo {
+                    margin: 0px;
+                    margin-top: 7px;
+                    display: block;
+                    text-align: center;
+                    order: 0;
+                }
+
+                .header .navbar {
+                    display: none;
+                    margin: 0px;
+                    text-align: center;
+                    width: 100%;
+                    order: 2;
+                }
+
+                .header .navbar li {
+                    display: block;
+                }
+
+                .header .navbar li a {
+                    display: block;
+                    padding: 10px
+                }
+
+                .header {
+                    justify-content: space-between;
+                }
+
+                .flex-row {
+                    max-width: 1320px;
+                }
+
+                .donate {
+                    font-size: 14px;
+                    order: 3;
+                    width: 100%;
+                    margin: 3px 0;
+                }
+
+                .donate .fm {
+                    display: none;
+                }
+            }
+
+            .btn {
+                border-radius: 0;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-top: 30px;
+                padding-right: 30px !important;
+                margin-bottom: 0;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.42857143;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-image: none;
+                border: 1px solid transparent;
+                border-radius: 4px;
+            }
+
+            .submit__btn {
+                color: #fff;
+                font-size: 17px;
+                background: #44c4c4 !important;
+                display: inline-block;
+                padding: 6px 12px;
+                margin-top: 30px;
+                margin-bottom: 0;
+                font-weight: 400;
+                line-height: 1.42857143;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                touch-action: manipulation;
+                cursor: pointer;
+                user-select: none;
+                border: 1px solid transparent;
+                border-radius: 4px;
+            }
+
+            #contsent .btn-default {
+                color: #333;
+                background-color: #fff;
+                border-color: #ccc;
+                height: 30px !important;
+            }
+
+            .mul li {
+                /*padding: 15px 7px 1px 7px;*/
+                border-bottom: 1px solid #ddd;
+                opacity: 0.6;
+            }
+
+            .mul li a {
+                color: black;
+                text-decoration: none;
+                font-size: 16px;
+                display: block
+            }
+
+            .mul li:hover {
+
+                opacity: 1;
+            }
+
+            .langSec:hover {
+                opacity: 1 !important;
+                text-decoration: underline !important;
+            }
+
+            .selectdiv {
+                position: relative;
+                border: 1px solid;
+                border-radius: 5px;
+                width: 115px;
+                margin-bottom: 3px;
+                height: 27px;
+            }
+
+            .selectdiv:after {
+                content: '<>';
+                cursor: pointer;
+                font: 17px "Consolas", monospace;
+                color: #333;
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+                right: 11px;
+                top: 2px;
+                padding: 0 0 2px;
+                border-bottom: 1px solid #999;
+                position: absolute;
+                pointer-events: none;
+            }
+
+            .selectdiv span {
+                text-align: left;
+                position: absolute;
+                left: 7px;
+                font-size: 13px;
+                top: 5;
+                font-family: inherit;
+            }
+
+            .selectdiv ul {
+                background: #ffffff;
+                font-family: inherit;
+                text-align: left;
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                position: absolute;
+                bottom: 26px;
+                max-height: 200px;
+                border: 1px solid;
+                left: -1px;
+                width: 115px;
+                overflow-y: auto;
+            }
+
+            .selectdiv ul li {
+                padding-left: 12px;
+                padding-top: 3px;
+                cursor: pointer;
+                font-size: 13px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 3px;
+            }
+
+            .langbar__active {
+                display: block !important
+            }
+
+            @media screen and (max-width:426px) {
+                .toolsSec {
+                    width: 100%;
+                    padding-left: 10px;
+                    border-left: 1px solid #ddd;
+                }
+            }
+
+            @media screen and (max-width:2560px) and (min-width:426px) {
+                .contentDiv {
+                    display: inline-flex;
+                }
+
+                .toolsSec {
+                    width: 30%;
+                    padding-left: 10px;
+                    border-left: 1px solid #ddd;
+                }
+            }
+
+            .mob-menu-icon {
+                height: 30px;
+                margin-top: -3px;
+                display: none;
+            }
+
+            .mob-menu-icon {
+                background: #F7F7F7;
+                width: fit-content;
+                padding: 3px 5px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+            .mob-menu-icon div {
+                width: 26px;
+                height: 3px;
+                background-color: #ADADAD;
+                border-radius: 50px;
+                margin: 4px 0;
+            }
+
+            @media(max-width:590px) {
+                .mob-menu-icon {
+                    display: block;
+                    float: right;
+                    order: 1;
+                }
+            }
+
+            @media(max-width:800px) {
+
+                .content {
+                    max-width: 90%;
+                }
+            }
+        </style>
+        <style>
+            .darkmode {
+                background: #2E2E2C !important;
+            }
+
+            .darkmode .btn {
+                border-radius: 4px;
+                background: #3A9FF4 !important;
+                padding: 12px 20px;
+                margin-top: 7px;
+                cursor: pointer;
+                border: none;
+                color: #fff;
+                font-size: 20px;
+            }
+
+            .darkmode div,
+            .darkmode span {
+                background: #2E2E2C !important;
+                color: #fff;
+            }
+
+            .darkmode a {
+                color: #fff !important;
+            }
+
+            .darkmode .mob-menu-icon div {
+                background: #fff !important;
+            }
+
+            .darkmode #topnavbar {
+                background: #2E2E2C !important;
+            }
+
+            .darkmode textarea {
+                background-color: #202020 !important;
+                color: #fff !important;
+            }
+
+            .darkmode .content img {
+                opacity: 0.8;
+            }
+
+            /*
+     -- 6-1-21
+     */
+            .edpd-tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+                /* If you want dots under the hoverable text */
+            }
+
+            .inlinADs {
+                min-height: 250px;
+                min-width: 300px;
+                background: #f7f7f7
+            }
+
+            @media screen and (max-width:426px) {
+                .scndAdd {
+                    display: none !important;
+                }
+
+                .inlinADs {
+                    display: block;
+                }
+
+                .inlinADs ins {
+                    margin-top: 10px;
+                }
+            }
+
+            @media screen and (max-width:2560px) and (min-width:426px) {
+                .inlinADs {
+                    display: inline-flex;
+                }
+
+                .scndAdd {
+                    margin-left: 30px !important;
+                }
+            }
+
+            /* Tooltip text */
+            .edpd-tooltip .tooltiptext {
+                visibility: hidden;
+                width: 100px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                padding: 5px 0;
+                font-size: 12px;
+                border-radius: 6px;
+                position: absolute;
+                top: -5px;
+                left: 105%;
+                z-index: 1;
+            }
+
+            .edpd-tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+
+            svg {
+                fill: black;
+            }
+
+            .darkmode svg {
+                fill: white;
+            }
+
+            p {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                margin: 0;
+            }
+
+            .h-350 {
+                height: 100%;
+                min-height: 350px;
+                background: #fff;
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+
+            .flex-row {
+                display: flex;
+                margin: 1em auto;
+                width: 100%;
+                max-width: 1100px;
+
+            }
+
+            .labels {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .top_ad_box {
+                text-align: center;
+                margin-bottom: 25px;
+                min-height: 90px;
+                background: #f7f7f7
+            }
+
+            .flex-col {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                position: relative;
+            }
+
+            #output {
+                text-align: center;
+            }
+
+            .copybtn,
+            .loadSample {
+                position: absolute;
+                right: 5px;
+                top: 0;
+                cursor: pointer;
+            }
+
+            .loadSample {
+                font-size: 11px;
+                top: 5;
+                border-bottom: 1px solid;
+            }
+
+            i.globalcopybtn {
+                padding-right: 22px;
+            }
+
+            .globalcopybtn:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                background: url('/imgs/copy.png');
+                height: 16px;
+                width: 16px;
+            }
+
+            body.darkmode .globalcopybtn:before {
+                filter: invert(1);
+            }
+
+            .btn {
+                background: #44c4c4 !important;
+                font-size: 22px !important
+            }
+
+            .flag-n {
+                position: relative;
+                cursor: pointer
+            }
+
+            .flag-n::before {
+                width: 110px;
+                height: 21px;
+                z-index: 10;
+                position: absolute;
+                background: #3c5057;
+                left: -45px;
+                font-weight: 700;
+                content: attr(data-title);
+                top: -37px;
+                color: #fff;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 12px;
+                padding-top: 5px;
+                display: none
+            }
+
+            .flag-n::after {
+                width: 0;
+                height: 0;
+                position: absolute;
+                left: 7px;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-top: 5px solid #3c5057;
+                top: -11px;
+                display: none;
+                content: ""
+            }
+
+            .flag-n:hover::after,
+            .flag-n:hover::before {
+                display: block
+            }
+
+            @media (max-width: 992px) {
+                table {
+                    width: 100% !important;
+                }
+
+                .flex-row {
+                    flex-direction: column;
+                    margin: 1em auto;
+                    row-gap: 30px;
+                    width: 98%;
+                }
+
+                .flex-col {
+                    width: 100% !important;
+                }
+
+                .flex-col textarea,
+                textarea.h-350 {
+                    height: 240px !important;
+                }
+
+                .btn {
+                    padding: 7px !important;
+                    height: unset !important;
+                }
+
+            }
+        </style>
+        <div class="header">
+            <span class="logo"><a href="/"><img src="/editpad.png" alt="Edit Pad - Free Online Text Editor" width="16"
+                        height="16" hspace="2" vspace="0" border="0" align="bottom">Editpad</a></span>&nbsp;&nbsp;
+            <label for="dark-mode-op" id="app__header--dark" class="" tooltip="Dark Mode" flow="left"><span
+                    id="darkmode" onclick="darkmode()" class="app__header--dark--span "><i
+                        class="gg-sun"></i></span></label>
+            <style>
+                .flex-row {
+                    max-width: 1320px;
+                }
+
+                .gg-sun {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    background: linear-gradient(to bottom, currentColor 4px, transparent 0)no-repeat 5px -6px/2px 6px, linear-gradient(to bottom, currentColor 4px, transparent 0)no-repeat 5px 14px/2px 6px, linear-gradient(to bottom, currentColor 4px, transparent 0)no-repeat -8px 5px/6px 2px, linear-gradient(to bottom, currentColor 4px, transparent 0)no-repeat 14px 5px/6px 2px;
+                    border-radius: 100px;
+                    box-shadow: inset 0 0 0 2px;
+                    border: 6px solid transparent;
+                }
+
+                .app__header--dark--span {
+                    transition: all 0.2s;
+                    width: 26px;
+                    display: flex;
+                    height: 26px;
+                    justify-content: center;
+                    align-items: center;
+                    transform: rotate(0);
+                    cursor: pointer
+                }
+
+                .gg-sun::before {
+                    transform: rotate(-45deg);
+                }
+
+                .gg-sun::after,
+                .gg-sun::before {
+                    content: "";
+                    display: block;
+                    box-sizing: border-box;
+                    position: absolute;
+                    width: 24px;
+                    height: 2px;
+                    border-right: 4px solid;
+                    border-left: 4px solid;
+                    left: -6px;
+                    top: 5px;
+                }
+
+                .gg-sun::after {
+                    transform: rotate(45deg);
+                }
+
+                .gg-sun::after,
+                .gg-sun::before {
+                    content: "";
+                    display: block;
+                    box-sizing: border-box;
+                    position: absolute;
+                    width: 24px;
+                    height: 2px;
+                    border-right: 4px solid;
+                    border-left: 4px solid;
+                    left: -6px;
+                    top: 5px;
+                }
+
+                #app__header--dark:hover .app__header--dark--span {
+                    transform: rotate(-25deg);
+                }
+
+                #app__header--dark::before {
+                    border-left-color: white;
+                }
+
+                #app__header--dark:hover::after {
+                    background: white;
+                    color: #fff;
+                    display: none;
+                }
+
+                #app__header--dark::after {
+                    content: attr(tooltip);
+                    text-align: center;
+                    min-width: 3rem;
+                    max-width: 21rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding: 1.4ch 2.5ch;
+                    border-radius: .8ch;
+                    box-shadow: 0 0.1rem 0.2rem -0.5em rgb(0 0 0 / 35%);
+                    background: var(--hover-color);
+                    color: var(--main-bg);
+                    z-index: 1000;
+                    display: none;
+                }
+
+                #app__header--dark {
+                    height: 26px;
+                    padding: 0;
+                    width: 26px;
+                    margin: 0;
+                }
+
+                .uplBtn {
+                    border-radius: 4px;
+                    background: grey;
+                    cursor: pointer;
+                    border: none;
+                    color: #fff;
+                    display: inline-block;
+                    padding: 3px 13px;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.42857143;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    -ms-touch-action: manipulation;
+                    touch-action: manipulation;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+
+                #checkPlag {
+                    width: max-content !important
+                }
+            </style>
+            <div class="mob-menu-icon" onclick="toggleM()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <span class="navbar" id="topnavbar">
+                <li><a href="https://www.editpad.org/tool/plagiarism-checker">Plagiarism Checker</a></li>
+                <li><a href="https://www.editpad.org/tool/paraphrasing-tool">Paraphrasing</a></li>
+                <li><a href="/contact.html">Contact us</a></li>
+
+
+            </span>
+
+            <label class="search-top" onclick="openSearchBar()"><img src="https://www.editpad.org/imgs/search-icon.svg"
+                    id="search-icon-image" class="search-icon-image" alt="search on editpad" /></span></label>
+
+        </div>
+        <style>
+            table {
+                border-collapse: collapse;
+                margin-bottom: 15px
+            }
+
+            .btn {
+                border-radius: 4px;
+                background: #3A9FF4;
+                padding: 12px 20px;
+                margin-top: 7px;
+                cursor: pointer;
+                border: none;
+                color: #fff;
+                font-size: 18px;
+                ;
+            }
+
+            .dont-break-out {
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                -ms-word-break: break-all;
+                word-break: break-all;
+                word-break: break-word;
+                -ms-hyphens: auto;
+                -moz-hyphens: auto;
+                -webkit-hyphens: auto;
+                hyphens: auto
+            }
+
+            @media screen and (max-width:426px) {
+                .w-50 {
+                    width: 100% !important
+                }
+
+                .textArrea {
+                    display: block;
+                }
+
+                .scndAdd {
+                    display: none !important;
+                }
+
+                .inlinADs {
+                    display: block;
+                }
+
+                .inlinADs ins {
+                    margin-top: 10px;
+                }
+            }
+
+            @media screen and (max-width:2560px) and (min-width:426px) {
+                .w-50 {
+                    width: 50% !important
+                }
+
+                .textArrea {
+                    display: inline-flex;
+                }
+
+                .inlinADs {
+                    display: inline-flex;
+                }
+
+                .scndAdd {
+                    margin-left: 30px !important;
+                }
+            }
+
+            .grecaptcha-badge {
+                display: none !important;
+            }
+
+            #paraphrase-loader {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                max-width: 500px;
+                transform: translateY(50%);
+                left: 0;
+                right: 0;
+                padding: 12px;
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.3) !important;
+                display: none;
+                margin: auto;
+                top: 35%;
+            }
+
+            #paraphrase-loader .progress-bar {
+                width: 0;
+                height: 10px;
+                float: left;
+                background-color: #e5dd95 !important;
+            }
+
+            .btn-row-actions {
+                margin: 0px auto;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding-right: 2px;
+                background: #ccccccab
+            }
+
+            pre {
+                white-space: normal !important;
+            }
+
+            .Differences td {
+                vertical-align: top !important;
+            }
+
+            .Differences {
+                position: relative;
+            }
+
+            .Differences thead {
+                position: sticky;
+                width: 100%;
+                top: -5px;
+            }
+
+            #result::-webkit-scrollbar-track,
+            textarea::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                background-color: #F5F5F5;
+                border-radius: 10px;
+            }
+
+            #result::-webkit-scrollbar,
+            textarea::-webkit-scrollbar {
+                width: 10px;
+                background-color: #F5F5F5;
+            }
+
+            #result::-webkit-scrollbar-thumb,
+            textarea::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-color: #FFF;
+                background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#44c4c4), to(#2dbfbf), color-stop(.6, #44c4c4));
+            }
+
+            .modes_div {
+                position: relative;
+                background: #F5F7F9;
+                width: fit-content;
+                column-gap: 2rem;
+                justify-content: center;
+            }
+
+            .merge_section {
+                display: flex;
+                position: absolute;
+                font-size: 13px;
+                top: 65px;
+                justify-content: space-around;
+                z-index: 10;
+                background: white;
+                width: 100%;
+                padding: 0 !important;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+
+            }
+
+            .modes_div div {
+                padding: 9px 10px;
+                margin: 10px;
+            }
+
+            .modes {
+                cursor: pointer;
+                color: #737373
+            }
+
+            .mode_active {
+                box-shadow: 0px 2px 5px #0000001c;
+                background: white;
+                color: #000
+            }
+
+            #right .brgreen,
+            #right .brred {
+                display: block;
+                background: #00800054;
+            }
+
+            #left .brgreen,
+            #left .brred {
+                display: block;
+                background: #ff00008f;
+            }
+
+            #right .red,
+            #right .green {
+                background: #00800054;
+                display: inline;
+                white-space: pre-wrap;
+                word-break: break-all;
+                overflow-wrap: break-word;
+            }
+
+            #left .red,
+            #left .green {
+                background: #ff00008f;
+                display: inline;
+                white-space: pre-wrap;
+                word-break: break-all;
+                overflow-wrap: break-word;
+            }
+
+            #merge_red,
+            #merge_green {
+                cursor: pointer
+            }
+        </style>
+        <link rel="stylesheet" href="https://www.editpad.org/tool/assets/css/diffstyles.css?v=1.1" type="text/css"
+            charset="utf-8" />
+        <div class="labels">
+            <label style="font-size: 12px;text-transform: uppercase;" for="">advertisement</label>
+        </div>
+        <div class="flex-row" style="column-gap: 30px;margin:0 auto">
+            <div class="flex-col" style="width:100%">
+                <div class="top_ad_box">
+                    <script async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7155931151667823"
+                        crossorigin="anonymous"></script>
+
+                    <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px"
+                        data-ad-client="ca-pub-7155931151667823" data-ad-slot="2347332674"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="flex-row" style="margin:0 auto">
+            <div class="flex-col" style="flex-basis:70%">
+                <div class="flex-row" style="flex-direction:column;margin:0 auto">
+                    <div class="flex-col" style="width:100%">
+                        <div style="text-align: center;">
+                            <div class="content textContent textArrea">
+                                <div class="w-50">
+                                    <p style="margin: 0px;">First Content :</p>
+                                    <div style="border: 1px solid #ccc;">
+                                        <textarea cols="100" rows="25" id="inputText1" name="text_1"
+                                            style="overflow-y: auto;width: 1100px;max-width:100%;margin:0 auto;background:#fff;border:none;padding:1em"
+                                            placeholder="Paste your content here to check differernce"></textarea>
+                                        <div id="paraphrase-loader">
+                                            <center>
+                                                <div class="progress-bar" id="percent-progress" role="progressbar"
+                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div><br>
+                                                <span id="percent-suggested">0%</span> Complete
+                                            </center>
+                                        </div>
+                                        <div class="flex-row btn-row-actions">
+                                            <button type="button" class="flag-n" data-title="Upload File" id="uplText"
+                                                onclick="uploadfile1()"
+                                                style="background: none;outline: none;border: 0px">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="28px" version="1.1"
+                                                    viewBox="-53 1 511 511.99906" width="28px">
+                                                    <g id="surface1">
+                                                        <path
+                                                            d="M 276.410156 3.957031 C 274.0625 1.484375 270.84375 0 267.507812 0 L 67.777344 0 C 30.921875 0 0.5 30.300781 0.5 67.152344 L 0.5 444.84375 C 0.5 481.699219 30.921875 512 67.777344 512 L 338.863281 512 C 375.71875 512 406.140625 481.699219 406.140625 444.84375 L 406.140625 144.941406 C 406.140625 141.726562 404.65625 138.636719 402.554688 136.285156 Z M 279.996094 43.65625 L 364.464844 132.328125 L 309.554688 132.328125 C 293.230469 132.328125 279.996094 119.21875 279.996094 102.894531 Z M 338.863281 487.265625 L 67.777344 487.265625 C 44.652344 487.265625 25.234375 468.097656 25.234375 444.84375 L 25.234375 67.152344 C 25.234375 44.027344 44.527344 24.734375 67.777344 24.734375 L 255.261719 24.734375 L 255.261719 102.894531 C 255.261719 132.945312 279.503906 157.0625 309.554688 157.0625 L 381.40625 157.0625 L 381.40625 444.84375 C 381.40625 468.097656 362.113281 487.265625 338.863281 487.265625 Z M 338.863281 487.265625 ">
+                                                        </path>
+                                                        <path
+                                                            d="M 305.101562 401.933594 L 101.539062 401.933594 C 94.738281 401.933594 89.171875 407.496094 89.171875 414.300781 C 89.171875 421.101562 94.738281 426.667969 101.539062 426.667969 L 305.226562 426.667969 C 312.027344 426.667969 317.59375 421.101562 317.59375 414.300781 C 317.59375 407.496094 312.027344 401.933594 305.101562 401.933594 Z M 305.101562 401.933594 ">
+                                                        </path>
+                                                        <path
+                                                            d="M 140 268.863281 L 190.953125 214.074219 L 190.953125 349.125 C 190.953125 355.925781 196.519531 361.492188 203.320312 361.492188 C 210.125 361.492188 215.6875 355.925781 215.6875 349.125 L 215.6875 214.074219 L 266.640625 268.863281 C 269.113281 271.457031 272.332031 272.820312 275.667969 272.820312 C 278.636719 272.820312 281.730469 271.707031 284.078125 269.480469 C 289.027344 264.78125 289.398438 256.988281 284.699219 252.042969 L 212.226562 174.253906 C 209.875 171.78125 206.660156 170.296875 203.199219 170.296875 C 199.734375 170.296875 196.519531 171.78125 194.171875 174.253906 L 121.699219 252.042969 C 117 256.988281 117.371094 264.902344 122.316406 269.480469 C 127.511719 274.179688 135.300781 273.808594 140 268.863281 Z M 140 268.863281 ">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                            <p style="width: 100%;text-align: end;"><span
+                                                    style="font-size: 14px;margin-right:25px">Words:<span
+                                                        id="totalWordsInput1">0</span></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-50">
+                                    <p style="margin: 0px;">Second Content :</p>
+                                    <div style="border: 1px solid #ccc;">
+                                        <textarea cols="100" rows="25" id="inputText2" name="text_2"
+                                            style="overflow-y: auto;width: 1100px;max-width:100%;margin:0 auto;background:#fff;border:none;padding:1em"
+                                            placeholder="Paste your content here to check differernce"></textarea>
+                                        <div class="flex-row btn-row-actions">
+                                            <button type="button" class="flag-n" data-title="Upload File" id="uplText2"
+                                                onclick="uploadfile2()"
+                                                style="background: none;outline: none;border: 0px">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="28px" version="1.1"
+                                                    viewBox="-53 1 511 511.99906" width="28px">
+                                                    <g id="surface1">
+                                                        <path
+                                                            d="M 276.410156 3.957031 C 274.0625 1.484375 270.84375 0 267.507812 0 L 67.777344 0 C 30.921875 0 0.5 30.300781 0.5 67.152344 L 0.5 444.84375 C 0.5 481.699219 30.921875 512 67.777344 512 L 338.863281 512 C 375.71875 512 406.140625 481.699219 406.140625 444.84375 L 406.140625 144.941406 C 406.140625 141.726562 404.65625 138.636719 402.554688 136.285156 Z M 279.996094 43.65625 L 364.464844 132.328125 L 309.554688 132.328125 C 293.230469 132.328125 279.996094 119.21875 279.996094 102.894531 Z M 338.863281 487.265625 L 67.777344 487.265625 C 44.652344 487.265625 25.234375 468.097656 25.234375 444.84375 L 25.234375 67.152344 C 25.234375 44.027344 44.527344 24.734375 67.777344 24.734375 L 255.261719 24.734375 L 255.261719 102.894531 C 255.261719 132.945312 279.503906 157.0625 309.554688 157.0625 L 381.40625 157.0625 L 381.40625 444.84375 C 381.40625 468.097656 362.113281 487.265625 338.863281 487.265625 Z M 338.863281 487.265625 ">
+                                                        </path>
+                                                        <path
+                                                            d="M 305.101562 401.933594 L 101.539062 401.933594 C 94.738281 401.933594 89.171875 407.496094 89.171875 414.300781 C 89.171875 421.101562 94.738281 426.667969 101.539062 426.667969 L 305.226562 426.667969 C 312.027344 426.667969 317.59375 421.101562 317.59375 414.300781 C 317.59375 407.496094 312.027344 401.933594 305.101562 401.933594 Z M 305.101562 401.933594 ">
+                                                        </path>
+                                                        <path
+                                                            d="M 140 268.863281 L 190.953125 214.074219 L 190.953125 349.125 C 190.953125 355.925781 196.519531 361.492188 203.320312 361.492188 C 210.125 361.492188 215.6875 355.925781 215.6875 349.125 L 215.6875 214.074219 L 266.640625 268.863281 C 269.113281 271.457031 272.332031 272.820312 275.667969 272.820312 C 278.636719 272.820312 281.730469 271.707031 284.078125 269.480469 C 289.027344 264.78125 289.398438 256.988281 284.699219 252.042969 L 212.226562 174.253906 C 209.875 171.78125 206.660156 170.296875 203.199219 170.296875 C 199.734375 170.296875 196.519531 171.78125 194.171875 174.253906 L 121.699219 252.042969 C 117 256.988281 117.371094 264.902344 122.316406 269.480469 C 127.511719 274.179688 135.300781 273.808594 140 268.863281 Z M 140 268.863281 ">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                            <p style="width: 100%;text-align: end;"><span
+                                                    style="font-size: 14px;margin-right:25px">Words:<span
+                                                        id="totalWordsInput2">0</span></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-col" style="width:100%;margin:0.5rem auto">
+                        <center>
+                            <div id="recaptchaBeforeBtn"></div>
+                            <div id="checkdif" class="btn" onclick="submitForm3()"
+                                style="margin: 0 auto;display: block;margin-top: 10px;cursor:pointer; box-sizing:border-box;width:250px">
+                                Check Diff</div>
+
+                        </center>
+                    </div>
+                    <div class="flex-col" style="width:100%;">
+                        <div style="width:100%;display:none" id="main_result">
+                            <h3 id="result_title"
+                                style="text-align: center;display:none;font-size: 25px;font-weight: 700;">Results:</h3>
+                            <div class="flex-row modes_div">
+                                <div class="modes" mode-data="1" id="merge">Merge</div>
+                                <div class="merge_section" style="display:none">
+                                    <div style="padding: 5px;" id="merge_red">Merge
+                                        <svg width="19" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5.5h16.5M14 1l4 4.5-4 4.5" stroke="#FF3B30"
+                                                stroke-linecap="square" style="mix-blend-mode: multiply;"></path>
+                                        </svg>
+                                    </div>
+                                    <div style="padding: 5px;" id="merge_green">
+                                        <svg width="19" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 5.5H1.5M5 10 1 5.5 5 1" stroke="#08C988"
+                                                stroke-linecap="square"></path>
+                                        </svg>Merge
+                                    </div>
+                                </div>
+                                <div class="modes mode_active" mode-data="3" id="exchange">
+                                    <svg id="icons_Q2" data-name="icons Q2" xmlns="http://www.w3.org/2000/svg"
+                                        width="18.015" height="18.999" viewBox="0 0 18.015 18.999">
+                                        <g id="Group_8331" data-name="Group 8331">
+                                            <path id="Path_21607" data-name="Path 21607"
+                                                d="M19.75,23.3a1.05,1.05,0,0,0-1.35-.1.95.95,0,0,0-.1,1.5L20.6,27H7a1,1,0,1,0,0,2H20.6l-2.3,2.3a.95.95,0,0,0,.1,1.5,1.05,1.05,0,0,0,1.35-.1l3.95-4a.95.95,0,0,0,0-1.4Z"
+                                                transform="translate(-5.992 -14.001)" fill="#44c4c4" />
+                                            <path id="Path_21608" data-name="Path 21608"
+                                                d="M10.242,14.7a1.05,1.05,0,0,0,1.35.1.95.95,0,0,0,.1-1.5L9.392,11h13.6a1,1,0,0,0,0-2H9.392l2.3-2.3a.95.95,0,0,0-.1-1.5,1.05,1.05,0,0,0-1.35.1l-3.95,4a.95.95,0,0,0,0,1.4Z"
+                                                transform="translate(-5.985 -5.001)" fill="#44c4c4" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="modes" mode-data="4" id="clear">Clear</div>
+                            </div>
+                            <div class="content textContent" id="result"
+                                style="margin-bottom: 3%;display:none;height: 300px !important;overflow: auto;">
+                                <table class="Differences DifferencesSideBySide">
+                                    <thead>
+                                        <tr>
+                                            <th>Old Version</th>
+                                            <th>New Version</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="Left" id="left"></td>
+                                            <td class="Right" id="right"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-col" style="width:100%">
+                        <div class="flex-row" style="justify-content:space-between;margin:0rem auto">
+                            <div style="text-align: center">
+                                <div class="labels__ads">
+                                    <label style="font-size: 12px;text-transform: uppercase;"
+                                        for="">advertisement</label>
+                                </div>
+                                <div class="inlinADs">
+
+                                    <div id="adngin-sidebar_3-0"></div>
+                                </div>
+                            </div>
+                            <div style="text-align: center;margin-bottom: 30px;">
+                                <div class="labels__ads">
+                                    <label style="font-size: 12px;text-transform: uppercase;"
+                                        for="">advertisement</label>
+                                </div>
+                                <div class="inlinADs">
+
+                                    <div id="adngin-sidebar_4-0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-col" style="width:100%;margin-top:1rem">
+                        <style>
+                            #recaptchaFeedback {
+                                transform: scale(.77);
+                                -webkit-transform: scale(.77);
+                                transform-origin: 0 0;
+                                -webkit-transform-origin: 0 0;
+                                height: 70px;
+                                width: 200px;
+                                margin-top: 10px;
+                                min-height: 70px;
+                            }
+
+                            .feedback_top_form {
+                                width: 100%;
+                                text-align: center;
+                            }
+
+                            .feedback_top_form p {
+                                text-align: center
+                            }
+
+                            .feedback_top_form input,
+                            .feedback_top_form textarea {
+                                width: 100%;
+                                margin-bottom: 10px
+                            }
+
+                            .feedback_top_form textarea {
+                                height: 80px
+                            }
+
+                            .feedback_top_form input[type=email] {
+                                height: 30px;
+                            }
+
+                            .feedback_top_form .responseMsg {
+                                display: none
+                            }
+
+                            .feedback_top_form button {
+                                text-align: center;
+                                width: 80px;
+                                height: 30px;
+                                margin-left: auto;
+                            }
+
+                            .dont-break-out h3,
+                            .dont-break-out h2,
+                            .dont-break-out h4 {
+                                margin: 10px 0px;
+                            }
+
+                            .dont-break-out ul,
+                            .dont-break-out ol {
+                                margin: 0px
+                            }
+
+                            .dont-break-out h1 {
+                                margin-top: 0px
+                            }
+
+                            .langSec {
+                                color: #000000;
+                                opacity: 0.6;
+                                text-decoration: none;
+                                border: 1px solid #ccc;
+                                padding: 2px 4px;
+                                font-size: 18px;
+                                box-shadow: 1px 1px 2px -1px #ccc;
+                            }
+                        </style>
+                        <div style="text-align: center;">
+                            <div class="content contentDiv" style="text-align: left;position:relative">
+                                <div class="dont-break-out" style="width: 100%;padding-right: 5px;">
+                                    <h1 style="text-align:center">Diff Checker Online</h1>
+                                    <p>The diff checker helps you to check the difference between two different text
+                                        files at one click.<br /> It compares the text between two different files and
+                                        highlights the unique content within seconds.</p>
+                                    <h2 id="how-to-use-diff-checker">How to use Diff Checker?</h2>
+                                    <p>To use this diffchecker online, follow the below easy steps:</p>
+                                    <ol>
+                                        <li>Write or paste the content in the above input boxes.</li>
+                                        <li>Or, upload files from the local device in different formats.</li>
+                                        <li>Click the Check Diff button.</li>
+                                    </ol>
+                                    <h2 id="how-does-difference-checker-work">How does Difference Checker work?</h2>
+                                    <p>This text difference&nbsp;checker will compare the given files and highlights the
+                                        unique text written in both files.</p>
+                                    <p>It compares the text line-by-line and checks the possible difference between the
+                                        given documents.<br /> If you enter the text in the checker to compare two
+                                        files:<br /> &nbsp;<br /> The tool uses the latest technologies and finds every
+                                        single piece of unique content as:<br /> &nbsp;<br /> The checker will quickly
+                                        highlight the different words, phrases, and sentences to prevent publishing
+                                        plagiarized content.</p>
+                                    <p>You can also use our <a href="https://www.editpad.org/tool/plagiarism-checker"
+                                            target="_blank">plagiarism checker</a> to make sure you are submitting
+                                        original and unique content.</p>
+                                    <h2 id="features-of-online-diff-checker">Features of online Diff Checker</h2>
+                                    <h3>No Registration</h3>
+                                    <p>Now, there is no need to complete the signup process to check the difference
+                                        between your different text documents.</p>
+                                    <p>The online diff checker is completely free and requires no registration to find
+                                        unique content.</p>
+                                    <h3>Files Support</h3>
+                                    <p>This feature provides an option to compare text files of different formats
+                                        including TXT, PDF, DOC, and DOCX.</p>
+                                    <h3>Highlights the Different Content&nbsp;</h3>
+                                    <p>If the checker finds any unique words or <a
+                                            href="https://www.grammar-monster.com/glossary/phrase.htm" rel="nofollow"
+                                            target="_blank">phrases</a>, it highlights them and makes them bold with a
+                                        yellow color.<br /> &nbsp;<br /> Finds the exactly matched content<br /> The
+                                        checker scans the given documents and doesn&rsquo;t change the color of the
+                                        exact match content.</p>
+                                    <h2 id="advantages-of-using-difference-checker-online">Advantages of using
+                                        Difference Checker Online</h2>
+                                    <p>Some of the main benefits of using this checker are:</p>
+                                    <ul>
+                                        <li>Helps webmasters to publish quality content by comparing and finding unique
+                                            text.</li>
+                                        <li>Saves time on manually comparing the files for the same text.</li>
+                                        <li><a href="https://www.thebalancecareers.com/what-does-a-computer-programmer-do-525996"
+                                                rel="nofollow" target="_blank">Programmers</a> can use this code
+                                            difference checker to find uniqueness in different codes.</li>
+                                        <li>Instead of writing or pasting the content, it allows users to upload files
+                                            in different formats.</li>
+                                        <li>Generates accurate text comparison reports within a fraction of seconds.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="toolsSec">
+                                    <div>
+                                        <h3 style="margin-bottom: 0px;margin-top: 0px;">Other Tools</h3>
+                                        <ul style="list-style-type: none;padding: 0;margin-top: 9px;" class="mul">
+                                            <li><a href='https://www.editpad.org/tool/plagiarism-checker'>Plagiarism
+                                                    Checker</a></li>
+                                            <li><a href='https://www.editpad.org/tool/paraphrasing-tool'>Paraphrasing
+                                                    Tool</a></li>
+                                            <li><a href='https://www.editpad.org/tool/reverse-text-generator'>Reverse
+                                                    Text - Backwards Text Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/small-text-generator'>Small Text
+                                                    Generator - Small Caps / Tiny Text</a></li>
+                                            <li><a href='https://www.editpad.org/tool/upside-down-text-converter'>Upside
+                                                    Down Text Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/words-to-pages'>Words to Pages</a>
+                                            </li>
+                                            <li><a href='https://www.editpad.org/tool/case-converter'>Case Converter</a>
+                                            </li>
+                                            <li><a href='https://www.editpad.org/tool/online-rich-text-editor'>Online
+                                                    rich-text editor</a></li>
+                                            <li><a href='https://www.editpad.org/tool/grammar-checker'>Grammar
+                                                    Checker</a></li>
+                                            <li><a href='https://www.editpad.org/tool/article-rewriter'>Article
+                                                    Rewriter</a></li>
+                                            <li><a href='https://www.editpad.org/tool/invisible-character'>Invisible
+                                                    Character</a></li>
+                                            <li><a href='https://www.editpad.org/tool/readability-checker'>Readability
+                                                    Checker</a></li>
+                                            <li><a href='https://www.editpad.org/tool/diff-checker'>Diff Checker</a>
+                                            </li>
+                                            <li><a href='https://www.editpad.org/tool/text-similarity-checker'>Text
+                                                    Similarity Checker</a></li>
+                                            <li><a href='https://www.editpad.org/tool/extract-text-from-image'>Extract
+                                                    Text From Image</a></li>
+                                            <li><a href='https://www.editpad.org/tool/text-summarizer'>Text
+                                                    Summarizer</a></li>
+                                            <li><a href='https://www.editpad.org/tool/emoji-translator'>Emoji
+                                                    Translator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/weird-text-generator'>Weird Text
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/stylish-text-generator'>Stylish
+                                                    Text Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/glitchy-text-generator'>Glitch
+                                                    Text Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/cursive-font-generator'>Cursive
+                                                    Font Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/gothic-text-generator'>Gothic Text
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/discord-font-generator'>Discord
+                                                    Font Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/aesthetic-text-generator'>Aesthetic
+                                                    Text Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/cool-text'>Cool Text Generator</a>
+                                            </li>
+                                            <li><a href='https://www.editpad.org/tool/wingdings-translator'>Wingdings
+                                                    Translator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/old-english-translator'>Old
+                                                    English Translator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/online-html-editor'>Online HTML
+                                                    Editor</a></li>
+                                            <li><a href='https://www.editpad.org/tool/cursed-font'>Cursed Text
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/bubble-text'>Bubble Text
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/strikethrough-text'>Strikethrough
+                                                    Text Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/zalgo-text'>Zalgo Text
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/big-text'>Big Text Generator -
+                                                    Generate Large Text </a></li>
+                                            <li><a href='https://www.editpad.org/tool/old-norse-translator'>Old Norse
+                                                    Translator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/fancy-font'>Fancy Font
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/cool-font'>Cool Font Generator</a>
+                                            </li>
+                                            <li><a href='https://www.editpad.org/tool/fortnite-font'>Fortnite Font
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/fancy-text-generator'>Fancy Text
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/word-counter'>Word Counter</a>
+                                            </li>
+                                            <li><a href='https://www.editpad.org/tool/character-counter'>Character
+                                                    Counter</a></li>
+                                            <li><a href='https://www.editpad.org/tool/punctuation-checker'>Punctuation
+                                                    checker</a></li>
+                                            <li><a href='https://www.editpad.org/tool/text-repeater'>Text Repeater</a>
+                                            </li>
+                                            <li><a href='https://www.editpad.org/tool/vaporwave-text-generator'>Vaporwave
+                                                    Text Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/citation-generator'>Citation
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/title-generator'>Title
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/text-to-handwriting'>Text To
+                                                    Handwriting</a></li>
+                                            <li><a href='https://www.editpad.org/tool/alphabetizer'>Alphabetizer</a>
+                                            </li>
+                                            <li><a href='https://www.editpad.org/tool/conclusion-generator'>Conclusion
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/abstract-generator'>Abstract
+                                                    Generator</a></li>
+                                            <li><a href='https://www.editpad.org/tool/list-randomizer'>List
+                                                    Randomizer</a></li>
+                                            <li><a href='https://www.editpad.org/tool/sentence-counter'>Sentence
+                                                    Counter</a></li>
+                                            <li><a href='https://www.editpad.org/tool/speech-to-text'>Speech to text</a>
+                                            </li>
+                                            <li><a href='https://www.editpad.org/tool/check-mark-symbol'>Check Mark
+                                                    Symbol</a></li>
+                                        </ul>
+                                        <hr>
+                                        <div>
+                                            <h3 style="margin: 5px 0;">Supported Languages</h3>
+                                            <p style="margin: 0px" class="lang__support">
+                                                <a style='color:#000000;opacity:0.6;text-decoration: none;'
+                                                    class='langSec' data-lang='EN'
+                                                    href='https://www.editpad.org/tool/diff-checker'>EN</a> <a
+                                                    style='color:#000000;opacity:0.6;text-decoration: none;'
+                                                    class='langSec' data-lang='es'
+                                                    href='https://www.editpad.org/tool/es/comprobador-de-diferencias'>ES</a>
+                                                <a style='color:#000000;opacity:0.6;text-decoration: none;'
+                                                    class='langSec' data-lang='fr'
+                                                    href='https://www.editpad.org/tool/fr/verificateur-de-differentiel'>FR</a>
+                                                <a style='color:#000000;opacity:0.6;text-decoration: none;'
+                                                    class='langSec' data-lang='de'
+                                                    href='https://www.editpad.org/tool/de/diff-prufer'>DE</a> <a
+                                                    style='color:#000000;opacity:0.6;text-decoration: none;'
+                                                    class='langSec' data-lang='id'
+                                                    href='https://www.editpad.org/tool/id/pemeriksa-perbedaan'>ID</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-col" style="width:30%">
+                <div style="position:sticky;top:0">
+                    <div style="text-align: center;">
+                        <div class="labels__ads">
+                            <label style="font-size: 12px;text-transform: uppercase;" for="">advertisement</label>
+                        </div>
+                        <div class="inlinADs">
+
+                            <div id="adngin-sidebar_1-0" style="min-width: 300px;"></div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="labels__ads">
+                            <label style="font-size: 12px;text-transform: uppercase;" for="">advertisement</label>
+                        </div>
+                        <div class="inlinADs">
+                            <div id="adngin-sidebar_2-0" style="min-width: 300px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center;display: flex;" class="textContent content">
+            <div style="width: 100%;">
+
+                <input onchange="readText(this.id,'inputText1',0)" style="display: none;" type="file"
+                    name="upload_file1" id="upload_file1">
+
+            </div>
+            <div style="width: 100%;">
+
+                <input onchange="readText(this.id,'inputText2',1)" style="display: none;" type="file"
+                    name="upload_file2" id="upload_file2">
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+
+            var intervalLoader;
+            function runLoader() {
+                var counter = 0;
+
+                document.getElementById("inputText1").style.opacity = "0.5";
+                document.getElementById("inputText2").style.opacity = "0.5";
+                document.getElementById("paraphrase-loader").style.display = "block";
+                document.getElementById('percent-progress').setAttribute('aria-valuenow', 0);
+                document.getElementById('percent-progress').style.width = 0 + "%";
+                document.getElementById('percent-suggested').innerText = 0 + "%";
+                intervalLoader = setInterval(function () {
+                    document.getElementById('percent-progress').setAttribute('aria-valuenow', counter + 1);
+                    document.getElementById('percent-progress').style.width = counter + 1 + "%";
+                    document.getElementById('percent-suggested').innerText = counter + "%";
+                    if (counter < 100) {
+                        counter += 5;
+                    } else {
+                        document.getElementById('percent-progress').setAttribute('aria-valuenow', 0);
+                        document.getElementById('percent-progress').style.width = 0 + "%";
+                        document.getElementById('percent-suggested').innerText = 0 + "%";
+                    }
+                }, 1200);
+            }
+
+            function stopLoader() {
+                document.getElementById('percent-progress').setAttribute('aria-valuenow', 100);
+                document.getElementById('percent-progress').style.width = 100 + "%";
+                document.getElementById('percent-suggested').innerText = 100 + "%";
+                document.getElementById("inputText1").style.opacity = "1";
+                document.getElementById("inputText2").style.opacity = "1";
+                document.getElementById("paraphrase-loader").style.display = "none";
+                document.getElementById('percent-progress').setAttribute('aria-valuenow', 0);
+                document.getElementById('percent-progress').style.width = 0 + "%";
+                document.getElementById('percent-suggested').innerText = 0 + "%";
+                clearInterval(intervalLoader);
+            }
+
+            function submitForm() {
+                document.getElementById("captcha1").click();
+            };
+
+            function submitForm2() {
+                document.getElementById("captcha2").click();
+            };
+
+            function submitForm3() {
+                if (document.getElementById('inputText1').value == '' || document.getElementById('inputText2').value == '') {
+                    alert('Kindly enter the text and try again!');
+                    return false;
+                }
+                var is_captcha = grecaptcha.getResponse(reCaptcha);
+                if (is_captcha != '') {
+                    runLoader();
+                    checkdiff();
+                } else {
+                    alert('Please submit captcha')
+                }
+            };
+
+            function uploadfile1() {
+                document.getElementById('upload_file1').click();
+            }
+
+            function uploadfile2() {
+                document.getElementById('upload_file2').click();
+            }
+
+            function readText(id, obj, cnt) {
+                var input = document.getElementById(id).files[0];
+                // var captcharesponse = grecaptcha.getResponse(cnt);
+                // console.log(input);
+                if (input == undefined) {
+                    return;
+                }
+                var formData = new FormData();
+                formData.append('myFile', input);
+                formData.append('getFileContent', true);
+                // formData.append('captcha', captcharesponse);
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        if (this.responseText == "captchaError") {
+                            alert("Wrong Captcha");
+                        } else {
+                            var resp = this.responseText;
+                            if (resp == 'error5@@##01') {
+                                alert('.txt, .docx, .pdf files are supported only. Try Again!');
+                                document.getElementById(id).value = '';
+                                document.getElementById(id).innerHTML = '';
+                            } else {
+                                document.getElementById(obj).value = resp;
+                                document.getElementById(obj).innerHTML = resp;
+                                document.getElementById(obj).focus();
+                                if (cnt == 0) {
+                                    $("#totalWordsInput1").html(wordCounter($('#inputText1').val()));
+                                } else {
+                                    $("#totalWordsInput2").html(wordCounter($('#inputText2').val()));
+                                }
+                            }
+                        }
+                        // grecaptcha.reset();
+                    }
+                };
+                xhttp.open("POST", "https://www.editpad.org/tool/tool/getTxtFrmFile");
+                xhttp.send(formData);
+
+            }
+
+            function checkdiff() {
+                if (addBlocker() == true) {
+                    var captcharesponse = grecaptcha.getResponse(reCaptcha);
+                    var text1 = document.getElementById('inputText1').value;
+                    var text2 = document.getElementById('inputText2').value;
+                    var submitt = true;
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            if (this.responseText == "captchaError") {
+                                alert("Wrong Captcha");
+                            } else {
+                                var l = this.responseText.split('span').length;
+                                data = $.parseJSON(this.responseText);
+                                if (data.st1_result == data.st2_result) {
+                                    document.getElementById("result").innerHTML = '<h3 style="text-align: center;background: #cdd6d6;padding: 10px;box-shadow: 0px 0px 19px -3px #f5f7f9;">Both Records Are Identically Same</h3>';
+                                    document.getElementById('result').style.display = 'block';
+                                    document.getElementById('main_result').style.display = 'block';
+                                    document.getElementById('result_title').style.display = 'block';
+                                    var elmnt = document.getElementById("result_title");
+                                    elmnt.scrollIntoView(true);
+                                }
+                                else {
+                                    document.getElementById("result").innerHTML = '<table class="Differences DifferencesSideBySide"><thead><tr><th>Old Version</th><th>New Version</th></tr></thead><tbody><tr> <td class="Left" id="left"></td><td class="Right" id="right"></td></tr></tbody></table>';
+                                    document.getElementById("left").innerHTML = '<pre>' + data.st1_result + '</pre>';
+                                    document.getElementById("right").innerHTML = '<pre>' + data.st2_result + '</pre>';
+                                    document.getElementById('result').style.display = 'block';
+                                    document.getElementById('main_result').style.display = 'block';
+                                    document.getElementById('result_title').style.display = 'block';
+                                    document.getElementsByClassName('modes_div')[0].style.display = 'flex';
+
+                                    var elmnt = document.getElementById("result_title");
+                                    elmnt.scrollIntoView(true);
+                                    /*document.getElementById("refreshBtn").style.display = "inline-block";*/
+                                }
+                            }
+                            stopLoader();
+                            grecaptcha.reset(reCaptcha);
+                        }
+                    };
+                    xhttp.open("POST", base_url + "tool/diffchecker", true);
+                    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xhttp.send("submit=" + submitt + "&text1=" + text1 + "&text2=" + text2 + "&captcha=" + captcharesponse);
+                }
+            }
+        </script>
+        <script src="https://www.editpad.org/tool/assets/js/jquery.min.js"></script>
+        <script>
+            $("#clear").on('click', function () {
+                clear()
+            });
+            function clear() {
+                $('#main_result').css('display', 'none');
+                $("#inputText1").val('');
+                $("#inputText2").val('');
+                $("#totalWordsInput1,#totalWordsInput2").html(0);
+            }
+            $("#exchange").on('click', function () {
+                exchange()
+            });
+            $("#merge_red").on('click', function () {
+                text1 = $('#inputText1').val();
+                text2 = $('#inputText2').val();
+                $('#inputText1').val(text1);
+                $('#inputText2').val(text1);
+                $(".merge_section").css('display', 'none');
+                document.getElementById("result").innerHTML = '<h3 style="text-align: center;background: #cdd6d6;padding: 10px;box-shadow: 0px 0px 19px -3px #f5f7f9;">Both Records Are Identically Same</h3>';
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('main_result').style.display = 'block';
+                document.getElementById('result_title').style.display = 'block';
+                var elmnt = document.getElementById("result_title");
+                elmnt.scrollIntoView(true);
+            });
+            $("#merge_green").on('click', function () {
+                text1 = $('#inputText1').val();
+                text2 = $('#inputText2').val();
+                $('#inputText1').val(text2);
+                $('#inputText2').val(text2);
+                $(".merge_section").css('display', 'none');
+                document.getElementById("result").innerHTML = '<h3 style="text-align: center;background: #cdd6d6;padding: 10px;box-shadow: 0px 0px 19px -3px #f5f7f9;">Both Records Are Identically Same</h3>';
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('main_result').style.display = 'block';
+                document.getElementById('result_title').style.display = 'block';
+                var elmnt = document.getElementById("result_title");
+                elmnt.scrollIntoView(true);
+            });
+            $("#merge").on('click', function () {
+                $(".merge_section").toggle();
+            });
+            function exchange() {
+                // ----------inputs-----------------
+                var text1, text2 = '';
+                text1 = $('#inputText1').val();
+                text2 = $('#inputText2').val();
+                $('#inputText1').val(text2);
+                $('#inputText2').val(text1);
+                // --------------output-------------
+                var left, right = '';
+                left = $("#left").html();
+                right = $("#right").html();
+                $("#left").html(right);
+                $("#right").html(left);
+            }
+            $('#inputText1').on('change keyup keypress', function (event) {
+                if ($(this).val().split(' ').length > 0) {
+                    $("#totalWordsInput1").html(wordCounter($('#inputText1').val()));
+                }
+            });
+            $('#inputText2').on('change keyup keypress', function (event) {
+                if ($(this).val().split(' ').length > 0) {
+                    $("#totalWordsInput2").html(wordCounter($('#inputText2').val()));
+                }
+            });
+            function wordCounter(str) {
+                var val = $.trim(str), chars = val.length;
+                words = val.replace(/\s+/gi, ' ').split(' ').length
+                if (!chars) words = 0;
+                totalWords = words;
+                totalChars = chars;
+                return totalWords;
+            }
+        </script>
+        <div style="width:100%; position:fixed; z-index:100; background:rgba(0,0,0,0.80); color:#E0E0E0;display:block;bottom:0; padding:10px;font-size:12px;text-align:center;"
+            id="consent">
+            By clicking "Accept" or continuing to use our site, you agree to our Privacy Policy for Website.
+            <span class="btn btn-default" onclick="cookieAccepted();"
+                style="padding: 3px 5px !important;font-size: 16px;margin: 0;height: unset;">Accept</span>
+            <a class="btn btn-default" href="/privacy.html" target="_blank"
+                style="padding: 3px 5px !important;font-size: 16px;margin: 0;height: unset;">Privacy Policy</a>
+        </div>
+        <ul align="right" class="footer">
+            <li><a href="/">Editpad</a></li>&nbsp;&nbsp;&nbsp;<li><a
+                    href="https://www.editpad.org/tool/plagiarism-checker">Plagiarism Checker</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="https://www.editpad.org/tool/paraphrasing-tool">Paraphrasing</a></li><br><br>
+            <li><a href="/" target="_blank" title="Home Editpad" rel="nofollow"><img
+                        src="https://www.editpad.org/editpad.png" alt="Edit Pad - Free Online Text Editor" width="16"
+                        height="16" hspace="2" vspace="0" border="0" align="bottom"></a>Edit Pad © 2021</li>
+        </ul>
+
+        <script>
+            function darkmode() {
+                document.getElementById("darkmode").classList.toggle("on");
+                if (document.getElementById("darkmode").classList.contains("on")) {
+                    // console.log("darkmode on");
+                    var date = new Date()
+                    date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000000);
+                    var expString = "; expires=" + date.toGMTString();
+                    document.cookie = "darkmode=1" + expString + " path=/;";
+                    document.body.classList.add("darkmode");
+
+                } else {
+                    var date = new Date()
+                    date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000000);
+                    var expString = "; expires=" + date.toGMTString();
+                    document.cookie = "darkmode=0" + expString + " path=/;";
+                    // console.log("darkmode of");
+                    document.body.classList.remove("darkmode");
+
+                }
+            }
+        </script>
+        <script>
+            function toggleM() {
+                var x = document.getElementById("topnavbar")
+                if (window.getComputedStyle(x).display == "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+            !function (a) { function e(a, b) { var c = new Image, d = a.getAttribute("data-src"); c.onload = function () { a.parent ? a.parent.replaceChild(c, a) : a.src = d, b ? b() : null }, c.src = d } function f(b) { var c = b.getBoundingClientRect(); return c.top >= 0 && c.left >= 0 && c.top <= (a.innerHeight || document.documentElement.clientHeight) } for (var b = function (a, b) { if (document.querySelectorAll) b = document.querySelectorAll(a); else { var c = document, d = c.styleSheets[0] || c.createStyleSheet(); d.addRule(a, "f:b"); for (var e = c.all, f = 0, g = [], h = e.length; f < h; f++)e[f].currentStyle.f && g.push(e[f]); d.removeRule(0), b = g } return b }, c = function (b, c) { a.addEventListener ? this.addEventListener(b, c, !1) : a.attachEvent ? this.attachEvent("on" + b, c) : this["on" + b] = c }, g = new Array, h = b("img.lazy"), i = function () { for (var a = 0; a < g.length; a++)f(g[a]) && e(g[a], function () { g.splice(a, a) }) }, j = 0; j < h.length; j++)g.push(h[j]); i(), c("scroll", i) }(this);
+        </script>
+
+
+
+        <style>
+            #edtpd_feedback_moddel_trigger_btn {
+                background: #222;
+                color: white;
+                padding: 10px 20px;
+                position: fixed;
+                float: right;
+                transform: rotate(90deg);
+                right: -40px;
+                border: 0;
+                cursor: pointer;
+                transition: box-shadow 0.3s ease;
+                top: calc(50% - 20px);
+                z-index: 12;
+                box-shadow: 0 0 0 0 transparent;
+                font-size: 16px;
+            }
+
+            #edtpd_feedback_moddel_trigger_btn_mobile {
+                position: fixed;
+                display: none;
+                bottom: 20px;
+                z-index: 11;
+                left: 20px;
+                padding: 5px;
+                background: #222;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            #edtpd_feedback_moddel_trigger_btn:hover {
+                box-shadow: 0 -2px 10px -1px #aaa;
+            }
+
+            /* The Modal (background) */
+            .edtpd-feedback-modal {
+                display: none;
+                position: fixed;
+                /* Stay in place */
+                z-index: 13;
+                /* Sit on top */
+                padding-top: 40px;
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/ opacity */
+            }
+
+            /* Modal Content */
+            .edtpd-feedback-modal .modal-content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 100%;
+                max-width: 480px;
+            }
+
+            .edtpd-feedback-modal .modal-content .feedback-form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+                margin-top: 20px;
+                justify-content: right;
+                position: relative;
+            }
+
+            .edtpd-feedback-modal .modal-content .feedback-form.loader-element:before {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: #0007;
+                content: 'Sending Feedback....';
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .edtpd-feedback-modal .modal-content .feedback-form input[type="email"],
+            .edtpd-feedback-modal .modal-content .feedback-form textarea {
+                padding: 5px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+            }
+
+            .edtpd-feedback-modal .modal-content .feedback-form input[type="email"]:focus,
+            .edtpd-feedback-modal .modal-content .feedback-form textarea:focus {
+                border-color: #333;
+            }
+
+            .edtpd-feedback-modal .modal-content .feedback-form textarea {
+                height: 120px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .edtpd-feedback-modal .modal-content .feedback-form button {
+                width: 120px;
+                padding: 5px;
+                background: #222;
+                color: white;
+                border: 0;
+                cursor: pointer;
+            }
+
+            .edtpd-feedback-modal .modal-content p.responseMsg {
+                text-align: center;
+                display: none;
+                color: green;
+            }
+
+            /* The Close Button */
+            .edtpd-feedback-modal .edtpd-feedback-close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                line-height: 10px;
+                font-weight: bold;
+            }
+
+            .edtpd-feedback-modal .edtpd-feedback-close:hover,
+            .edtpd-feedback-modal .edtpd-feedback-close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            /*  -- SHaker Css */
+            .shaker-element {
+                animation: shake 0.5s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes shake {
+                0% {
+                    transform: translate(1px, 1px) rotate(0deg);
+                }
+
+                10% {
+                    transform: translate(-1px, -2px) rotate(-1deg);
+                }
+
+                20% {
+                    transform: translate(-3px, 0px) rotate(1deg);
+                }
+
+                30% {
+                    transform: translate(3px, 2px) rotate(0deg);
+                }
+
+                40% {
+                    transform: translate(1px, -1px) rotate(1deg);
+                }
+
+                50% {
+                    transform: translate(-1px, 2px) rotate(-1deg);
+                }
+
+                60% {
+                    transform: translate(-3px, 1px) rotate(0deg);
+                }
+
+                70% {
+                    transform: translate(3px, 1px) rotate(-1deg);
+                }
+
+                80% {
+                    transform: translate(-1px, -1px) rotate(1deg);
+                }
+
+                90% {
+                    transform: translate(1px, 2px) rotate(0deg);
+                }
+
+                100% {
+                    transform: translate(1px, -2px) rotate(-1deg);
+                }
+            }
+
+            @media screen and (max-width: 992px) {
+                #edtpd_feedback_moddel_trigger_btn {
+                    display: none;
+                }
+
+                #edtpd_feedback_moddel_trigger_btn_mobile {
+                    display: block;
+                }
+            }
+        </style>
+        <button id="edtpd_feedback_moddel_trigger_btn">Feedback</button>
+    </div>
+
+    <span id="edtpd_feedback_moddel_trigger_btn_mobile"><img src="/feedback.svg"
+            alt="mobie trigger svg feedback trgirrer" style="height: 28px;width: 28px;"></span>
+
+    <div id="edtpd_feedback_modal_wrapper" class="edtpd-feedback-modal">
+
+        <div class="modal-content">
+            <span class="edtpd-feedback-close">&times;</span>
+            <p>Feedback</p>
+            <div class="feedback-form">
+                <input type="email" id="edtpd_feedback_email_input" placeholder="Enter your email">
+                <input type="hidden" id="url" name="url" value="https://www.editpad.org/tool/diff-checker">
+                <textarea id="edtpd_feedback_suggestion_input"
+                    placeholder="Write your Feedback / Suggestion / bug report / tool request to send webmaster"></textarea>
+                <div id="recaptchaFeedback"></div>
+                <button onclick="edtpd_feedback_recaptcha_callback()">Send</button>
+                <p class="responseMsg">Thank You, we got your feedback.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("edtpd_feedback_modal_wrapper");
+        var innerContent = document.querySelector('#edtpd_feedback_modal_wrapper .modal-content');
+        var btn = document.getElementById("edtpd_feedback_moddel_trigger_btn");
+        var btn_mob = document.getElementById("edtpd_feedback_moddel_trigger_btn_mobile");
+        var formWrapper = document.querySelector('.feedback-form');
+        var span = document.getElementsByClassName("edtpd-feedback-close")[0];
+        var element = document.getElementById("form__feedback");
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        btn_mob.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        // validate email
+        function validateEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                innerContent.classList.add('shaker-element');
+                window.setTimeout(function () {
+                    innerContent.classList.remove('shaker-element');
+                }, 400);
+            }
+        }
+
+        // -- validate recaptcha
+        function edtpd_feedback_recaptcha_callback() {
+            if (validateEmail(document.querySelector('#edtpd_feedback_email_input').value)) {
+                var is_captcha = grecaptcha.getResponse(recaptchaFeedback);
+                if (is_captcha != '') {
+                    validateandSendFeedback();
+                } else {
+                    alert('Please submit captcha')
+                }
+                document.getElementById("edtpd_feedback_recaptcha").click();
+            } else {
+                alert("ERROR: Not Valid Email");
+            }
+            // validateandSendFeedback();
+        }
+
+        // send and Save Feedback
+        function validateandSendFeedback() {
+            // -- inputs
+            var _email_el = document.querySelector('#edtpd_feedback_email_input');
+            var _message_el = document.querySelector('#edtpd_feedback_suggestion_input');
+            var _url = document.getElementById('url').value;
+
+            //-- validation
+            if (_email_el.value.length <= 0) {
+                alert('Please Enter Email');
+                return;
+            }
+            if (_message_el.value.length <= 0) {
+                alert('Please Enter Message');
+                return;
+            }
+
+
+            // -- run loader
+            formWrapper.classList.add('loader-element');
+
+            // -- get User Information and Send To Server
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+
+                    formWrapper.classList.remove('loader-element');
+                    document.querySelector('.responseMsg').style.display = 'block';
+                    window.setTimeout(() => {
+                        document.querySelector('.responseMsg').style.display = 'none';
+                        modal.style.display = "none";
+                    }, 1000);
+
+                    // -- process request
+                    var userInfo = JSON.parse(this.responseText);
+                    var _user_info_obj = ["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36|" + userInfo.ip + "|" + userInfo.city + "|" + userInfo.state_prov + "|" + userInfo.country_name + "|" + window.location.href];
+                    sendFeedBackToSave(_email_el, _message_el, _url, _user_info_obj);
+                }
+            }
+            xhttp.open("GET", "https://api.ipgeolocation.io/ipgeo?apiKey=f56918ccce9d46f5a2ac406e65e48d8f&fields=city,state_prov,country_name");
+            xhttp.send();
+        }
+
+        function sendFeedBackToSave(a, b, _url, c) {
+            const xhttp = new XMLHttpRequest();
+            var gcapthchacountID = document.querySelectorAll('button.g-recaptcha').length - 1;
+            if (gcapthchacountID <= 0) {
+                gcapthchacountID = 0;
+            }
+            var edtpd_feedback_captcharesponse = grecaptcha.getResponse(gcapthchacountID);
+            // console.log('TOK: ' + edtpd_feedback_captcharesponse);
+            var base_url = "https://www.editpad.org/tool/";
+            // console.log(base_url);
+            xhttp.open('POST', base_url + 'savefeedback', true);
+            xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    // -- recaptcha verification
+                    if (this.responseText !== "success") {
+                        console.log(this.responseText);
+                        document.getElementById('edtpd_feedback_suggestion_input').value = '';
+                        document.getElementById('edtpd_feedback_email_input').value = '';
+                    } else {
+                        //reset
+                        document.getElementById('edtpd_feedback_suggestion_input').value = '';
+                        document.getElementById('edtpd_feedback_email_input').value = '';
+                    }
+
+                }
+                // console.log(gcapthchacountID);
+                grecaptcha.reset(gcapthchacountID);
+            }
+            xhttp.send('_email=' + encodeURIComponent(a.value) + '&_msg=' + encodeURIComponent(b.value) + '&_url=' + encodeURIComponent(_url) + '&_info=' + encodeURIComponent(c) + "&edtpd_feedback_captcha=" + edtpd_feedback_captcharesponse);
+        }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1X1S77N82E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1X1S77N82E');
+    </script>
+    <script>
+        function isScriptAlreadyIncluded(src) {
+            var scripts = document.getElementsByTagName("script");
+            for (var i = 0; i < scripts.length; i++)
+                if (scripts[i].getAttribute('src') == src) return true;
+            return false;
+        }
+
+        // window.dataLayer = window.dataLayer || [];
+        // function gtag(){dataLayer.push(arguments);}
+        // gtag('js', new Date());
+        // gtag('config', 'G-1X1S77N82E');
+
+
+        // -- Delayed Script
+        var isrecaptchajsincluded = false;
+
+        document.addEventListener('mouseover', event => {
+            if (!isrecaptchajsincluded) {
+                loadRecaptchajsAPIonClickCallback();
+                isrecaptchajsincluded = true;
+            }
+        });
+
+
+        // document.addEventListener("DOMContentLoaded", function(event) { 
+        function loadRecaptchajsAPIonClickCallback() {
+            var captchaURLAPI = 'https://www.google.com/recaptcha/api.js';
+            // if(!isScriptAlreadyIncluded(captchaURLAPI)){
+            // setTimeout(() => {
+            var script = document.createElement("script");
+            script.setAttribute('src', captchaURLAPI);
+            // script.defer = true;
+            document.body.appendChild(script);
+            // }, 2000);
+            // }
+        }
+// });
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js" defer></script>
+    <script>
+        var mycl_url = '';
+        function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+            var cookieArr = document.cookie.split(";");
+
+            // Loop through the array elements
+            for (var i = 0; i < cookieArr.length; i++) {
+                var cookiePair = cookieArr[i].split("=");
+
+                /* Removing whitespace at the beginning of the cookie name
+                and compare it with the given string */
+                if (name == cookiePair[0].trim()) {
+                    // Decode the cookie value and return
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+
+            // Return null if not found
+            return 'notfound';
+        }
+
+        var config = {
+            'messagingSenderId': '189537486031',
+            'apiKey': 'AIzaSyBWa79m3ijZeD50d8ugN_g_hNGH1doSOr8',
+            'projectId': 'editpad-ebf3d',
+            'appId': '1:189537486031:web:bc7e3024b08096602863ba',
+        };
+        firebase.initializeApp(config);
+
+        const messaging = firebase.messaging();
+        messaging
+            .requestPermission()
+            .then(function () {
+                console.log("Notification permission granted.");
+
+                // get the token in the form of promise
+                return messaging.getToken()
+            })
+            .then(function (token) {
+                console.log(token);
+                var pushTok = getCookie("push_token");
+                console.log("yeh " + pushTok);
+                if (pushTok != '' && pushTok != 'notfound') {
+                    if (pushTok != token) {
+
+                        saveTokn(token, 'updated');
+                    }
+                }
+                else {
+                    saveTokn(token, 'saved');
+                }
+
+
+            })
+            .catch(function (err) {
+                console.log("Unable to get permission to notify.", err);
+            });
+
+        let enableForegroundNotification = true;
+        messaging.onMessage(function (payload) {
+            // console.log("Message received. ", payload);
+            // NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload);
+            var payll = JSON.parse(payload.data.notification);
+            mycl_url = payll.click_action;
+            if (enableForegroundNotification) {
+                const { title, ...options } = JSON.parse(payload.data.notification);
+                navigator.serviceWorker.getRegistrations().then(registration => {
+                    registration[0].showNotification(title, options);
+                });
+            }
+        });
+
+        function saveTokn(token, state) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    console.log(this.responseText);
+
+                }
+            };
+            xhttp.open("POST", "https://www.editpad.org/tool/tool/save_push_token", true);
+            var urrl = "https://www.editpad.org/tool/diff-checker";
+            var submit = true;
+
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("submit=" + submit + "&token=" + token + "&state=" + state + "&reg_page=" + urrl);
+        }
+
+    </script>
+    <script>
+        function cookieAccepted() {
+            document.getElementById("consent").style.display = 'none';
+            var date = new Date();
+
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDate();
+            date = new Date(year + 3, month, day);
+
+            date.setTime(date.getTime() + 316224000);
+            var expString = "; expires=" + date.toGMTString();
+            document.cookie = "cookieAccepted=1" + expString + " path=/;";
+        }
+        function toggleM() {
+            var x = document.getElementById("topnavbar")
+            if (window.getComputedStyle(x).display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function copyTextToClipboard(f) {
+            // b = document.querySelector(this);
+            e = f.innerText;
+
+            var o = document.createElement("textarea"); o.style.position = "fixed", o.style.top = 0, o.style.left = 0, o.style.width = "2em", o.style.height = "2em", o.style.padding = 0, o.style.border = "none", o.style.outline = "none", o.style.boxShadow = "none", o.style.background = "transparent", o.value = e, document.body.appendChild(o), o.focus(), o.select(); try { var t = document.execCommand("copy") ? "successful" : "unsuccessful"; edpdGlobalShowCopiedAlert(f); } catch (e) { console.log("Oops, unable to copy") } /*setTimeout(function(){copyButton.innerHTML='Copy to clipboard'}.bind(this),1000);*/ document.body.removeChild(o);
+        }
+        function edpdGlobalShowCopiedAlert(e) {
+            e.setAttribute("data-title", "Copied");
+            setInterval(() => {
+                e.setAttribute("data-title", "Click to copy");
+            }, 1000);
+        }
+
+
+    </script>
+    <div id="floorad-wrapper"
+        style="background:#f2f7f9!important;width:100%;bottom:0;position:fixed;box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);text-align: center;padding-top:4px;">
+        <a id="close-floorad-btn" onclick="hideFAd()"
+            style="cursor:pointer;margin-right: 5px;display: inline-block;margin-top: -30px;float: right;">&#10006;</a>
+        <div id="sticky-ad-background"></div>
+        <div id="adngin-adhesive_bottom-0"></div>
+    </div>
+    <script>
+        function hideFAd() {
+            document.getElementById("floorad-wrapper").setAttribute("style", "display:none;");
+        }
+    </script>
+    <script>
+        window.onload = function () {
+            var width = screen.width;
+            if (width < 500) {
+                document.getElementById('search_query').setAttribute('placeholder', 'Enter Search Here');
+            } else {
+                document.getElementById('search_query').setAttribute('placeholder', 'Enter Search Term To Find Tool');
+            }
+        };
+    //  document.addEventListener('click',function(e)
+    // {
+    //     if(e.target.id == 'search-icon-image'){
+    //         document.getElementById('search-bar-global').style.display = 'block';
+    //         document.getElementById('search_query').value = '';
+    //     }else if (e.target.id != 'search_query'){
+    //         document.getElementById('search-bar-global').style.display = 'none';
+    //         document.getElementById('search_query').value = '';
+    //     }
+    // });
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script>
+
+
+    <style>
+        .alert_box_awdws {
+            box-shadow: 0px 2px 8px 8px #cccccc6e;
+            padding: 0px 0px 20px 0px;
+            max-width: 500px;
+            top: 100px;
+            position: absolute;
+            margin: auto;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            left: 33%;
+            background: white;
+            z-index: 9999;
+        }
+
+        .alert_box_awdws button {
+
+            padding: 10px 50px;
+            FONT-WEIGHT: 100;
+            background: #3A9FF4;
+            border: none;
+            border-radius: 5px;
+            color: white;
+
+        }
+
+        .show {
+            display: block !important
+        }
+    </style>
+    <div id="detect"></div>
+    <div style="display:none;position: absolute;left: 0;top: 0;width: 100%;z-index: 10;background: #00000061;height: 100%;"
+        id="alert_box_awdws">
+        <div class="alert_box_awdws">
+            <div style="background:#EBF6FF;text-align:center">
+                <img src="https://www.editpad.org/tool/assets/images/adblocker_alert.svg">
+            </div>
+            <div style="text-align:center;padding: 2em;">
+                <h2>Adblock Detected!</h2>
+                <p>Our website is made possible by displaying ads to our visitors. please support us by whitelisting our
+                    website.</p>
+                <button id="continue" style="cursor:pointer">Continue</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        const detect = document.querySelector("#detect");
+        const wrapper = document.querySelector("#alert_box_awdws");
+        const button = wrapper.querySelector("#continue");
+        function addBlocker() {
+            let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
+            for (let item of adClasses) {
+                detect.classList.add(item);
+
+            }
+            let getProperty = window.getComputedStyle(detect).getPropertyValue("display");
+            // console.log(wrapper.classList.contains("show"));
+            if (!wrapper.classList.contains("show")) {
+                getProperty == "none" ? wrapper.classList.add("show") : wrapper.classList.remove("show");
+                if (getProperty == "none") {
+                    window.scrollTo(0, 0)
+                    $('.main____div').css('opacity', '0.5');
+                    $('.main____div').css('pointer-events', 'none');
+                    // wrapper.show();
+                    $('body').css('overflow', 'hidden');
+                    return false;
+                } else {
+                    $('body').css('overflow', 'auto');
+                    return true;
+                }
+            }
+        }
+        button.addEventListener("click", () => {
+            wrapper.classList.remove("show");
+            //   wrapper.hide();
+            $('body').css('overflow', 'auto');
+            $('.main____div').css('opacity', '1');
+            $('.main____div').css('pointer-events', 'all');
+        });
+    </script>
+    <script
+        type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "licenseKey": "ca07248735", "applicationID": "797055187", "transactionName": "YldTZxcHXUZSWxELXVsdcFARD1xbHGwKDV4aQVlcEhJcWl8=", "queueTime": 0, "applicationTime": 6, "atts": "ThBQEV8dTkg=", "errorBeacon": "bam.nr-data.net", "agent": "" }</script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "calendar-mobile-app-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MARK 4",
+  "license": "ISC",
+  "dependencies": {
+    "diff": "^5.1.0"
+  }
+}
