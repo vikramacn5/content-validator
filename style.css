@@ -391,6 +391,7 @@ section.features {
   transform: none;
   transition: none;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .feature:nth-child(6) .zwe-op.feature-img img:nth-child(2) {

@@ -1,5 +1,6 @@
 import { compareTwoStrings } from "./compare-string.js";
 import { diffCheck } from "./diff-checker.js";
+import { addHoverListener } from "./view.js";
 
 const content = `
     Zoho Calendar Mobile App Webpage Content
@@ -90,8 +91,8 @@ for (let i = 0; i < refinedContentArray.length; i++) {
       ).toFixed(2)} percentage match range`;
       allTextElements[j].style.backgroundColor = "#e0c552";
       const diffElement = diffCheck(text2, text1);
-      allTextElements[j].innerHTML = diffElement.innerHTML;
-      console.log(diffElement);
+      addHoverListener(allTextElements[j]);
+      // allTextElements[j].innerHTML = diffElement.innerHTML;
       break;
     } else if (matchRange >= 0.75 && matchRange < 0.9) {
       containsContent = `${text2}, A lot of changes with ${(
@@ -99,7 +100,7 @@ for (let i = 0; i < refinedContentArray.length; i++) {
       ).toFixed(2)} percentage match range`;
       allTextElements[j].style.backgroundColor = "#ff7070";
       const diffElement = diffCheck(text2, text1);
-      allTextElements[j].innerHTML = diffElement.innerHTML;
+      // allTextElements[j].innerHTML = diffElement.innerHTML;
       break;
     }
   }

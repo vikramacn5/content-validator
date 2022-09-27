@@ -27,6 +27,7 @@ export const diffCheck = function (oldStr, newStr) {
   console.log(result);
 
   const fragment = document.createElement("span");
+  fragment.classList.add("virtual-content");
 
   result.forEach((part) => {
     const color =
@@ -40,5 +41,7 @@ export const diffCheck = function (oldStr, newStr) {
     fragment.appendChild(span);
   });
 
-  return fragment;
+  const fragmentWrapper = document.createElement("span");
+  fragmentWrapper.appendChild(fragment);
+  return fragmentWrapper;
 };
