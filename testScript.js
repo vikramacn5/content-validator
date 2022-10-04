@@ -77,6 +77,7 @@ for (let i = 0; i < refinedContentArray.length; i++) {
 
   for (let j = 0; j < allTextElements.length; j++) {
     const text1 = refinedContentArray[i];
+    // console.log("hello", allTextElements[j].textContent);
     const text2 = cleanContent(allTextElements[j].textContent);
 
     const matchRange = compareTwoStrings(text1, text2);
@@ -91,7 +92,7 @@ for (let i = 0; i < refinedContentArray.length; i++) {
       ).toFixed(2)} percentage match range`;
       allTextElements[j].style.backgroundColor = "#e0c552";
       const diffElement = diffCheck(text2, text1);
-      addHoverListener(allTextElements[j]);
+      addHoverListener(allTextElements[j], diffElement);
       // allTextElements[j].innerHTML = diffElement.innerHTML;
       break;
     } else if (matchRange >= 0.75 && matchRange < 0.9) {
