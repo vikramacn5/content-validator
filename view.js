@@ -10,11 +10,12 @@ export const addHoverListener = function (element, correctElement) {
       position: absolute;
       height: 20px;
       width: 20px;
-      background-color: rgb(51, 51, 51);
+      background-image: linear-gradient(to right bottom, transparent 50%, rgb(51, 51, 51) 50%);
       transform: rotate(45deg);
       left: 0;
       right: 0;
       margin: auto;
+      box-shadow: 3px 6px 20px rgb(0 0 0 / 50%);
     `;
     contentTip.appendChild(arrow);
     contentTip.classList.add("content-tip");
