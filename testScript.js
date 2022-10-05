@@ -92,7 +92,7 @@ for (let i = 0; i < refinedContentArray.length; i++) {
       ).toFixed(2)} percentage match range`;
       allTextElements[j].style.backgroundColor = "#e0c552";
       const diffElement = diffCheck(text2, text1);
-      addHoverListener(allTextElements[j], diffElement);
+      addHoverListener(allTextElements[j], diffElement, text1);
       // allTextElements[j].innerHTML = diffElement.innerHTML;
       break;
     } else if (matchRange >= 0.75 && matchRange < 0.9) {

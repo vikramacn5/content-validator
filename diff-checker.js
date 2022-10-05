@@ -28,6 +28,13 @@ export const diffCheck = function (oldStr, newStr) {
 
   const fragment = document.createElement("span");
   fragment.classList.add("virtual-content");
+  fragment.style.cssText = `
+    display: inline-block;
+    max-height: 180px;
+    width: 400px;
+    overflow-y: scroll;
+    padding: 24px 30px 0px;
+  `;
 
   result.forEach((part) => {
     const color =
