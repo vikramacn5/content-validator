@@ -22,13 +22,22 @@ headTag.insertAdjacentHTML(
 `
 );
 
+export const removeContentTip = function () {
+  const bodyEl = document.querySelector("body");
+  const contentTip = document.querySelector(".content-tip");
+  if (contentTip) bodyEl.removeChild(contentTip);
+};
+
 export const addHoverListener = function (
   element,
   correctElement,
   correctText
 ) {
   element.addEventListener("mouseenter", function (e) {
+    removeContentTip();
     console.log(element.getBoundingClientRect(), element, correctElement);
+    const topPosition =
+      window.pageYOffset + element.getBoundingClientRect().top;
     // const contentTipWraper = document.createElement('div');
     const contentTip = document.createElement("div");
     const arrow = document.createElement("span");
@@ -55,7 +64,8 @@ export const addHoverListener = function (
     contentTip.style.cssText = `
       background-color: rgb(51, 51, 51);
       position: absolute;
-      top: 150px;
+      top: ${topPosition}px;
+      transform:translateY(-110%);
       left: 30%;
       padding: 20px 0;
       z-index: 10000;
@@ -63,6 +73,7 @@ export const addHoverListener = function (
       box-shadow: 3px 6px 20px rgb(0 0 0 / 50%);
       color: #bbb;
       font-size: 18px;
+      visibility: hidden;
     `;
 
     arrow.innerHTML = "&nbsp;";
@@ -95,5 +106,7 @@ export const addHoverListener = function (
     contentTip.appendChild(correctElement);
 
     document.querySelector("body").appendChild(contentTip);
+    console.log(contentTip.getBoundingClientRect());
+    contentTip.style.visibility = "visible";
   });
 };

@@ -1,6 +1,10 @@
 import { compareTwoStrings } from "./compare-string.js";
 import { diffCheck } from "./diff-checker.js";
 import { addHoverListener } from "./view.js";
+import { removeContentTip } from "./view.js";
+
+const body = document.querySelector("body");
+body.addEventListener("click", removeContentTip);
 
 const content = `
     Zoho Calendar Mobile App Webpage Content
