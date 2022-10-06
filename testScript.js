@@ -4,7 +4,9 @@ import { addHoverListener } from "./view.js";
 import { removeContentTip } from "./view.js";
 
 const body = document.querySelector("body");
-body.addEventListener("click", removeContentTip);
+body.addEventListener("click", function (e) {
+  !e.target.closest(".content-tip") && removeContentTip();
+});
 
 const content = `
     Zoho Calendar Mobile App Webpage Content
@@ -95,8 +97,8 @@ for (let i = 0; i < refinedContentArray.length; i++) {
         matchRange * 100
       ).toFixed(2)} percentage match range`;
       allTextElements[j].style.backgroundColor = "#e0c552";
-      const diffElement = diffCheck(text2, text1);
-      addHoverListener(allTextElements[j], diffElement, text1);
+      // const diffElement = diffCheck(text2, text1);
+      addHoverListener(allTextElements[j], text1, text2);
       // allTextElements[j].innerHTML = diffElement.innerHTML;
       break;
     } else if (matchRange >= 0.75 && matchRange < 0.9) {
@@ -105,6 +107,7 @@ for (let i = 0; i < refinedContentArray.length; i++) {
       ).toFixed(2)} percentage match range`;
       allTextElements[j].style.backgroundColor = "#ff7070";
       const diffElement = diffCheck(text2, text1);
+      addHoverListener(allTextElements[j], text1, text2);
       // allTextElements[j].innerHTML = diffElement.innerHTML;
       break;
     }

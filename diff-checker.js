@@ -38,13 +38,13 @@ export const diffCheck = function (oldStr, newStr) {
 
   result.forEach((part) => {
     const color =
-      part[0] === 1 ? "green" : part[0] === -1 ? "red" : "currentcolor";
+      part[0] === 1 ? "#09d909" : part[0] === -1 ? "red" : "currentcolor";
     // const background =
     //   part[0] === 1 ? "#cee9ce" : part[0] === -1 ? "#ffbaba" : "transparent";
     span = document.createElement("span");
     span.style.color = color;
     if (part[1] === " ")
-      span.style.background = `linear-gradient(to bottom, transparent 12%, red 12%, red 88%, transparent 88%)`;
+      span.style.background = `linear-gradient(to bottom, transparent 12%, ${color} 12%, ${color} 88%, transparent 88%)`;
     // span.style.background = background;
     span.appendChild(document.createTextNode(part[1]));
     fragment.appendChild(span);

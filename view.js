@@ -1,3 +1,5 @@
+import { diffCheck } from "./diff-checker.js";
+
 const headTag = document.querySelector("head");
 headTag.insertAdjacentHTML(
   "beforeend",
@@ -28,16 +30,15 @@ export const removeContentTip = function () {
   if (contentTip) bodyEl.removeChild(contentTip);
 };
 
-export const addHoverListener = function (
-  element,
-  correctElement,
-  correctText
-) {
+export const addHoverListener = function (element, correctText, pageText) {
   element.addEventListener("mouseenter", function (e) {
+    const correctElement = diffCheck(pageText, correctText);
     removeContentTip();
     console.log(element.getBoundingClientRect(), element, correctElement);
-    const topPosition =
-      window.pageYOffset + element.getBoundingClientRect().top;
+
+    const elementPosition = element.getBoundingClientRect();
+    const topPosition = window.pageYOffset + elementPosition.top;
+
     // const contentTipWraper = document.createElement('div');
     const contentTip = document.createElement("div");
     const arrow = document.createElement("span");
@@ -66,7 +67,7 @@ export const addHoverListener = function (
       position: absolute;
       top: ${topPosition}px;
       transform:translateY(-110%);
-      left: 30%;
+      left: ${elementPosition.left}px;
       padding: 20px 0;
       z-index: 10000;
       border-radius: 15px;
@@ -106,7 +107,12 @@ export const addHoverListener = function (
     contentTip.appendChild(correctElement);
 
     document.querySelector("body").appendChild(contentTip);
-    console.log(contentTip.getBoundingClientRect());
+    const contentTipHeight = contentTip.getBoundingClientRect().height;
+
+    if (topPosition < contentTipHeight) {
+      contentTip.style.top = "0px";
+      contentTip.style.transform = "translateY(0)";
+    }
     contentTip.style.visibility = "visible";
   });
 };
