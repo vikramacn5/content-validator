@@ -107,11 +107,20 @@ export const addHoverListener = function (element, correctText, pageText) {
     contentTip.appendChild(correctElement);
 
     document.querySelector("body").appendChild(contentTip);
-    const contentTipHeight = contentTip.getBoundingClientRect().height;
+    const contentTipPosition = contentTip.getBoundingClientRect();
+    const documentWidth = document
+      .querySelector("body")
+      .getBoundingClientRect().width;
+    const contentTipHeight = contentTipPosition.height;
+    const contentTipRight = contentTipPosition.right;
 
     if (topPosition < contentTipHeight) {
-      contentTip.style.top = "0px";
       contentTip.style.transform = "translateY(0)";
+      contentTip.style.top = "0px";
+    }
+    if (contentTipRight > documentWidth) {
+      contentTip.style.left = "auto";
+      contentTip.style.right = "0px";
     }
     contentTip.style.visibility = "visible";
   });
